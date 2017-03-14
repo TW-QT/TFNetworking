@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		86C8F9951E77CBDA0040C592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C8F9941E77CBDA0040C592 /* main.m */; };
+		86C8F9981E77CBDA0040C592 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C8F9971E77CBDA0040C592 /* AppDelegate.m */; };
+		86C8F99B1E77CBDA0040C592 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C8F99A1E77CBDA0040C592 /* ViewController.m */; };
+		86C8F99E1E77CBDA0040C592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86C8F99C1E77CBDA0040C592 /* Main.storyboard */; };
+		86C8F9A01E77CBDA0040C592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86C8F99F1E77CBDA0040C592 /* Assets.xcassets */; };
+		86C8F9A31E77CBDA0040C592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86C8F9A11E77CBDA0040C592 /* LaunchScreen.storyboard */; };
+		86C8F9AE1E77CBDB0040C592 /* TFNetworkingDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C8F9AD1E77CBDB0040C592 /* TFNetworkingDemoTests.m */; };
+		86C8F9B91E77CBDB0040C592 /* TFNetworkingDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C8F9B81E77CBDB0040C592 /* TFNetworkingDemoUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		86C8F9AA1E77CBDB0040C592 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86C8F9881E77CBDA0040C592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86C8F98F1E77CBDA0040C592;
+			remoteInfo = TFNetworkingDemo;
+		};
+		86C8F9B51E77CBDB0040C592 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86C8F9881E77CBDA0040C592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86C8F98F1E77CBDA0040C592;
+			remoteInfo = TFNetworkingDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		86C8F9901E77CBDA0040C592 /* TFNetworkingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFNetworkingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		86C8F9941E77CBDA0040C592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		86C8F9961E77CBDA0040C592 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		86C8F9971E77CBDA0040C592 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		86C8F9991E77CBDA0040C592 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		86C8F99A1E77CBDA0040C592 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		86C8F99D1E77CBDA0040C592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		86C8F99F1E77CBDA0040C592 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		86C8F9A21E77CBDA0040C592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		86C8F9A41E77CBDB0040C592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86C8F9A91E77CBDB0040C592 /* TFNetworkingDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFNetworkingDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		86C8F9AD1E77CBDB0040C592 /* TFNetworkingDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFNetworkingDemoTests.m; sourceTree = "<group>"; };
+		86C8F9AF1E77CBDB0040C592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86C8F9B41E77CBDB0040C592 /* TFNetworkingDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFNetworkingDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		86C8F9B81E77CBDB0040C592 /* TFNetworkingDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFNetworkingDemoUITests.m; sourceTree = "<group>"; };
+		86C8F9BA1E77CBDB0040C592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		86C8F98D1E77CBDA0040C592 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86C8F9A61E77CBDB0040C592 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86C8F9B11E77CBDB0040C592 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		86C8F9871E77CBDA0040C592 = {
+			isa = PBXGroup;
+			children = (
+				86C8F9921E77CBDA0040C592 /* TFNetworkingDemo */,
+				86C8F9AC1E77CBDB0040C592 /* TFNetworkingDemoTests */,
+				86C8F9B71E77CBDB0040C592 /* TFNetworkingDemoUITests */,
+				86C8F9911E77CBDA0040C592 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		86C8F9911E77CBDA0040C592 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86C8F9901E77CBDA0040C592 /* TFNetworkingDemo.app */,
+				86C8F9A91E77CBDB0040C592 /* TFNetworkingDemoTests.xctest */,
+				86C8F9B41E77CBDB0040C592 /* TFNetworkingDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		86C8F9921E77CBDA0040C592 /* TFNetworkingDemo */ = {
+			isa = PBXGroup;
+			children = (
+				86C8F9961E77CBDA0040C592 /* AppDelegate.h */,
+				86C8F9971E77CBDA0040C592 /* AppDelegate.m */,
+				86C8F9991E77CBDA0040C592 /* ViewController.h */,
+				86C8F99A1E77CBDA0040C592 /* ViewController.m */,
+				86C8F99C1E77CBDA0040C592 /* Main.storyboard */,
+				86C8F99F1E77CBDA0040C592 /* Assets.xcassets */,
+				86C8F9A11E77CBDA0040C592 /* LaunchScreen.storyboard */,
+				86C8F9A41E77CBDB0040C592 /* Info.plist */,
+				86C8F9931E77CBDA0040C592 /* Supporting Files */,
+			);
+			path = TFNetworkingDemo;
+			sourceTree = "<group>";
+		};
+		86C8F9931E77CBDA0040C592 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				86C8F9941E77CBDA0040C592 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		86C8F9AC1E77CBDB0040C592 /* TFNetworkingDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				86C8F9AD1E77CBDB0040C592 /* TFNetworkingDemoTests.m */,
+				86C8F9AF1E77CBDB0040C592 /* Info.plist */,
+			);
+			path = TFNetworkingDemoTests;
+			sourceTree = "<group>";
+		};
+		86C8F9B71E77CBDB0040C592 /* TFNetworkingDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				86C8F9B81E77CBDB0040C592 /* TFNetworkingDemoUITests.m */,
+				86C8F9BA1E77CBDB0040C592 /* Info.plist */,
+			);
+			path = TFNetworkingDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		86C8F98F1E77CBDA0040C592 /* TFNetworkingDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86C8F9BD1E77CBDB0040C592 /* Build configuration list for PBXNativeTarget "TFNetworkingDemo" */;
+			buildPhases = (
+				86C8F98C1E77CBDA0040C592 /* Sources */,
+				86C8F98D1E77CBDA0040C592 /* Frameworks */,
+				86C8F98E1E77CBDA0040C592 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TFNetworkingDemo;
+			productName = TFNetworkingDemo;
+			productReference = 86C8F9901E77CBDA0040C592 /* TFNetworkingDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		86C8F9A81E77CBDB0040C592 /* TFNetworkingDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86C8F9C01E77CBDB0040C592 /* Build configuration list for PBXNativeTarget "TFNetworkingDemoTests" */;
+			buildPhases = (
+				86C8F9A51E77CBDB0040C592 /* Sources */,
+				86C8F9A61E77CBDB0040C592 /* Frameworks */,
+				86C8F9A71E77CBDB0040C592 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86C8F9AB1E77CBDB0040C592 /* PBXTargetDependency */,
+			);
+			name = TFNetworkingDemoTests;
+			productName = TFNetworkingDemoTests;
+			productReference = 86C8F9A91E77CBDB0040C592 /* TFNetworkingDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		86C8F9B31E77CBDB0040C592 /* TFNetworkingDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86C8F9C31E77CBDB0040C592 /* Build configuration list for PBXNativeTarget "TFNetworkingDemoUITests" */;
+			buildPhases = (
+				86C8F9B01E77CBDB0040C592 /* Sources */,
+				86C8F9B11E77CBDB0040C592 /* Frameworks */,
+				86C8F9B21E77CBDB0040C592 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86C8F9B61E77CBDB0040C592 /* PBXTargetDependency */,
+			);
+			name = TFNetworkingDemoUITests;
+			productName = TFNetworkingDemoUITests;
+			productReference = 86C8F9B41E77CBDB0040C592 /* TFNetworkingDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		86C8F9881E77CBDA0040C592 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = dabay;
+				TargetAttributes = {
+					86C8F98F1E77CBDA0040C592 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					86C8F9A81E77CBDB0040C592 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 86C8F98F1E77CBDA0040C592;
+					};
+					86C8F9B31E77CBDB0040C592 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 86C8F98F1E77CBDA0040C592;
+					};
+				};
+			};
+			buildConfigurationList = 86C8F98B1E77CBDA0040C592 /* Build configuration list for PBXProject "TFNetworkingDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 86C8F9871E77CBDA0040C592;
+			productRefGroup = 86C8F9911E77CBDA0040C592 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				86C8F98F1E77CBDA0040C592 /* TFNetworkingDemo */,
+				86C8F9A81E77CBDB0040C592 /* TFNetworkingDemoTests */,
+				86C8F9B31E77CBDB0040C592 /* TFNetworkingDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		86C8F98E1E77CBDA0040C592 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86C8F9A31E77CBDA0040C592 /* LaunchScreen.storyboard in Resources */,
+				86C8F9A01E77CBDA0040C592 /* Assets.xcassets in Resources */,
+				86C8F99E1E77CBDA0040C592 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86C8F9A71E77CBDB0040C592 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86C8F9B21E77CBDB0040C592 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		86C8F98C1E77CBDA0040C592 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86C8F99B1E77CBDA0040C592 /* ViewController.m in Sources */,
+				86C8F9981E77CBDA0040C592 /* AppDelegate.m in Sources */,
+				86C8F9951E77CBDA0040C592 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86C8F9A51E77CBDB0040C592 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86C8F9AE1E77CBDB0040C592 /* TFNetworkingDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86C8F9B01E77CBDB0040C592 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86C8F9B91E77CBDB0040C592 /* TFNetworkingDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		86C8F9AB1E77CBDB0040C592 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86C8F98F1E77CBDA0040C592 /* TFNetworkingDemo */;
+			targetProxy = 86C8F9AA1E77CBDB0040C592 /* PBXContainerItemProxy */;
+		};
+		86C8F9B61E77CBDB0040C592 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86C8F98F1E77CBDA0040C592 /* TFNetworkingDemo */;
+			targetProxy = 86C8F9B51E77CBDB0040C592 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		86C8F99C1E77CBDA0040C592 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86C8F99D1E77CBDA0040C592 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		86C8F9A11E77CBDA0040C592 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86C8F9A21E77CBDA0040C592 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		86C8F9BB1E77CBDB0040C592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		86C8F9BC1E77CBDB0040C592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		86C8F9BE1E77CBDB0040C592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TFNetworkingDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "http---taofei.me.TFNetworkingDemo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		86C8F9BF1E77CBDB0040C592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TFNetworkingDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "http---taofei.me.TFNetworkingDemo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		86C8F9C11E77CBDB0040C592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TFNetworkingDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "http---taofei.me.TFNetworkingDemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFNetworkingDemo.app/TFNetworkingDemo";
+			};
+			name = Debug;
+		};
+		86C8F9C21E77CBDB0040C592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TFNetworkingDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "http---taofei.me.TFNetworkingDemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFNetworkingDemo.app/TFNetworkingDemo";
+			};
+			name = Release;
+		};
+		86C8F9C41E77CBDB0040C592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TFNetworkingDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "http---taofei.me.TFNetworkingDemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TFNetworkingDemo;
+			};
+			name = Debug;
+		};
+		86C8F9C51E77CBDB0040C592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TFNetworkingDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "http---taofei.me.TFNetworkingDemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TFNetworkingDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		86C8F98B1E77CBDA0040C592 /* Build configuration list for PBXProject "TFNetworkingDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86C8F9BB1E77CBDB0040C592 /* Debug */,
+				86C8F9BC1E77CBDB0040C592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86C8F9BD1E77CBDB0040C592 /* Build configuration list for PBXNativeTarget "TFNetworkingDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86C8F9BE1E77CBDB0040C592 /* Debug */,
+				86C8F9BF1E77CBDB0040C592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		86C8F9C01E77CBDB0040C592 /* Build configuration list for PBXNativeTarget "TFNetworkingDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86C8F9C11E77CBDB0040C592 /* Debug */,
+				86C8F9C21E77CBDB0040C592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		86C8F9C31E77CBDB0040C592 /* Build configuration list for PBXNativeTarget "TFNetworkingDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86C8F9C41E77CBDB0040C592 /* Debug */,
+				86C8F9C51E77CBDB0040C592 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 86C8F9881E77CBDA0040C592 /* Project object */;
+}
