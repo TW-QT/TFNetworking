@@ -7,6 +7,7 @@
 //
 
 #import "JHNetWorkTools.h"
+#import <AFNetworking.h>
 
 @implementation JHNetWorkTools
 /**
