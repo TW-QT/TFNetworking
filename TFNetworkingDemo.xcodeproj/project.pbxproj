@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E0730226A186FF620E71DC8 /* libPods-TFNetworkingDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 474A98B16D5FC1FC801E8D47 /* libPods-TFNetworkingDemo.a */; };
+		8620B1141E790AD6007C58EB /* JHNetWorkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8620B1131E790AD6007C58EB /* JHNetWorkTools.m */; };
 		86C8F9951E77CBDA0040C592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C8F9941E77CBDA0040C592 /* main.m */; };
 		86C8F9981E77CBDA0040C592 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C8F9971E77CBDA0040C592 /* AppDelegate.m */; };
 		86C8F99B1E77CBDA0040C592 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C8F99A1E77CBDA0040C592 /* ViewController.m */; };
@@ -35,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		474A98B16D5FC1FC801E8D47 /* libPods-TFNetworkingDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TFNetworkingDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E180C6D35585E837C670F3B /* Pods-TFNetworkingDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFNetworkingDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TFNetworkingDemo/Pods-TFNetworkingDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		8620B1121E790AD6007C58EB /* JHNetWorkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHNetWorkTools.h; sourceTree = "<group>"; };
+		8620B1131E790AD6007C58EB /* JHNetWorkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHNetWorkTools.m; sourceTree = "<group>"; };
 		86C8F9901E77CBDA0040C592 /* TFNetworkingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFNetworkingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86C8F9941E77CBDA0040C592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		86C8F9961E77CBDA0040C592 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +57,7 @@
 		86C8F9B41E77CBDB0040C592 /* TFNetworkingDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFNetworkingDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86C8F9B81E77CBDB0040C592 /* TFNetworkingDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFNetworkingDemoUITests.m; sourceTree = "<group>"; };
 		86C8F9BA1E77CBDB0040C592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE17DA3A1C11E9707517F5F4 /* Pods-TFNetworkingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFNetworkingDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TFNetworkingDemo/Pods-TFNetworkingDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E0730226A186FF620E71DC8 /* libPods-TFNetworkingDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8620B1111E790AD6007C58EB /* TFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				8620B1121E790AD6007C58EB /* JHNetWorkTools.h */,
+				8620B1131E790AD6007C58EB /* JHNetWorkTools.m */,
+			);
+			path = TFNetworking;
+			sourceTree = SOURCE_ROOT;
+		};
 		86C8F9871E77CBDA0040C592 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +102,8 @@
 				86C8F9AC1E77CBDB0040C592 /* TFNetworkingDemoTests */,
 				86C8F9B71E77CBDB0040C592 /* TFNetworkingDemoUITests */,
 				86C8F9911E77CBDA0040C592 /* Products */,
+				8FCB774BEEAA705D6EF35062 /* Pods */,
+				D9166EB7A32437E6C830DE57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +120,7 @@
 		86C8F9921E77CBDA0040C592 /* TFNetworkingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8620B1111E790AD6007C58EB /* TFNetworking */,
 				86C8F9961E77CBDA0040C592 /* AppDelegate.h */,
 				86C8F9971E77CBDA0040C592 /* AppDelegate.m */,
 				86C8F9991E77CBDA0040C592 /* ViewController.h */,
@@ -140,6 +160,23 @@
 			path = TFNetworkingDemoUITests;
 			sourceTree = "<group>";
 		};
+		8FCB774BEEAA705D6EF35062 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E180C6D35585E837C670F3B /* Pods-TFNetworkingDemo.debug.xcconfig */,
+				CE17DA3A1C11E9707517F5F4 /* Pods-TFNetworkingDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D9166EB7A32437E6C830DE57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				474A98B16D5FC1FC801E8D47 /* libPods-TFNetworkingDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86C8F9BD1E77CBDB0040C592 /* Build configuration list for PBXNativeTarget "TFNetworkingDemo" */;
 			buildPhases = (
+				7504F86B8E4E82D73210C4E8 /* [CP] Check Pods Manifest.lock */,
 				86C8F98C1E77CBDA0040C592 /* Sources */,
 				86C8F98D1E77CBDA0040C592 /* Frameworks */,
 				86C8F98E1E77CBDA0040C592 /* Resources */,
+				6F9C66331040E3B46D334DBA /* [CP] Embed Pods Frameworks */,
+				C00497682687264463D4B05F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,11 +308,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6F9C66331040E3B46D334DBA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TFNetworkingDemo/Pods-TFNetworkingDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7504F86B8E4E82D73210C4E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C00497682687264463D4B05F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TFNetworkingDemo/Pods-TFNetworkingDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		86C8F98C1E77CBDA0040C592 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8620B1141E790AD6007C58EB /* JHNetWorkTools.m in Sources */,
 				86C8F99B1E77CBDA0040C592 /* ViewController.m in Sources */,
 				86C8F9981E77CBDA0040C592 /* AppDelegate.m in Sources */,
 				86C8F9951E77CBDA0040C592 /* main.m in Sources */,
@@ -420,6 +509,7 @@
 		};
 		86C8F9BE1E77CBDB0040C592 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E180C6D35585E837C670F3B /* Pods-TFNetworkingDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TFNetworkingDemo/Info.plist;
@@ -431,6 +521,7 @@
 		};
 		86C8F9BF1E77CBDB0040C592 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE17DA3A1C11E9707517F5F4 /* Pods-TFNetworkingDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TFNetworkingDemo/Info.plist;
@@ -505,6 +596,7 @@
 				86C8F9BF1E77CBDB0040C592 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		86C8F9C01E77CBDB0040C592 /* Build configuration list for PBXNativeTarget "TFNetworkingDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +605,7 @@
 				86C8F9C21E77CBDB0040C592 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		86C8F9C31E77CBDB0040C592 /* Build configuration list for PBXNativeTarget "TFNetworkingDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +614,7 @@
 				86C8F9C51E77CBDB0040C592 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
