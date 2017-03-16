@@ -147,7 +147,7 @@
                 
                 NSString *responseStr =  [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
                 
-                successBlock([JHNetWorkTools dictionaryWithJsonString:responseStr]);
+                successBlock([TFNetWorkingManager dictionaryWithJsonString:responseStr]);
                 
                 
             } failure:^(NSURLSessionDataTask *task, NSError *error) {
@@ -165,7 +165,7 @@
                 
                 NSString *responseStr =  [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
                 
-                successBlock([JHNetWorkTools dictionaryWithJsonString:responseStr]);
+                successBlock([TFNetWorkingManager dictionaryWithJsonString:responseStr]);
                 
                 
             } failure:^(NSURLSessionDataTask *task, NSError *error) {
@@ -327,7 +327,7 @@
 {
     // 0.设置API地址
     URLString = [NSString stringWithFormat:@"%@%@",BASE_URL,[URLString stringByReplacingOccurrencesOfString:@" " withString:@"%20"]];
-    NSLog(@"\n POST上传单张图片参数列表:%@\n\n%@\n",parameters,[JHNetWorkTools URLEncryOrDecryString:parameters IsHead:false]);
+    NSLog(@"\n POST上传单张图片参数列表:%@\n\n%@\n",parameters,[TFNetWorkingManager URLEncryOrDecryString:parameters IsHead:false]);
     
     // 1.创建请求管理者
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -359,7 +359,7 @@
         
         NSString *responseStr =  [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
         
-        successBlock([JHNetWorkTools dictionaryWithJsonString:responseStr]);
+        successBlock([TFNetWorkingManager dictionaryWithJsonString:responseStr]);
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         
@@ -379,7 +379,7 @@
 {
     // 0.设置API地址
     URLString = [NSString stringWithFormat:@"%@%@",BASE_URL,[URLString stringByReplacingOccurrencesOfString:@" " withString:@"%20"]];
-    NSLog(@"\n POST上传多张图片参数列表:%@\n\n%@\n",parameters,[JHNetWorkTools URLEncryOrDecryString:parameters IsHead:false]);
+    NSLog(@"\n POST上传多张图片参数列表:%@\n\n%@\n",parameters,[TFNetWorkingManager URLEncryOrDecryString:parameters IsHead:false]);
     
     // 1.创建请求管理者
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -418,7 +418,7 @@
         
         NSString *responseStr =  [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
         
-        successBlock([JHNetWorkTools dictionaryWithJsonString:responseStr]);
+        successBlock([TFNetWorkingManager dictionaryWithJsonString:responseStr]);
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         
@@ -463,7 +463,7 @@
         
         NSString *responseStr =  [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
         
-        successBlock([JHNetWorkTools dictionaryWithJsonString:responseStr]);
+        successBlock([TFNetWorkingManager dictionaryWithJsonString:responseStr]);
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         

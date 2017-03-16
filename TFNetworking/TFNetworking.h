@@ -24,7 +24,7 @@
 #ifndef TFNetworking_h
 #define TFNetworking_h
 
-#import "JHNetWorkTools.h"
+#import "TFNetWorkingManager.h"
 
 
 #endif /* TFNetworking_h */
