@@ -1,28 +1,28 @@
 //
-//  JHNetWorkTools.m
+//  TFNetWorkingManager.m
 //  AFNRequestTool
 //
-//  Created by Jivan on 2017/3/2.
-//  Copyright © 2017年 Jivan. All rights reserved.
+//  Created by Donkey-Tao on 2016/5/12.
+//  Copyright © 2016年 http://taofei.me All rights reserved.
 //
 
-#import "JHNetWorkTools.h"
+#import "TFNetWorkingManager.h"
 #import <AFNetworking.h>
 
-@implementation JHNetWorkTools
+@implementation TFNetWorkingManager
 /**
  *  类方法
  */
-+ (JHNetWorkTools *)sharedUtil {
++ (TFNetWorkingManager *)sharedUtil {
     
     static dispatch_once_t  onceToken;
-    static JHNetWorkTools * setSharedInstance;
+    static TFNetWorkingManager * setSharedInstance;
     //线程锁
 //    @synchronized (self) {
 //        setSharedInstance = [[JHNetWorkTools alloc] init];
 //    }
     dispatch_once(&onceToken, ^{
-        setSharedInstance = [[JHNetWorkTools alloc] init];
+        setSharedInstance = [[TFNetWorkingManager alloc] init];
         
     });
     return setSharedInstance;

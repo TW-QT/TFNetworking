@@ -1,9 +1,9 @@
 //
-//  JHNetWorkTools.h
+//  TFNetWorkingManager.h
 //  AFNRequestTool
 //
-//  Created by Jivan on 2017/3/2.
-//  Copyright © 2017年 Jivan. All rights reserved.
+//  Created by Donkey-Tao on 2016/5/12.
+//  Copyright © 2016年 http://taofei.me All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -22,13 +22,13 @@ typedef NS_ENUM(NSInteger,HTTPMETHOD)
 };
 
 
-@interface JHNetWorkTools : NSObject
+@interface TFNetWorkingManager : NSObject
 
 
 /**
  *  类方法
  */
-+ (JHNetWorkTools *)sharedUtil;
++ (TFNetWorkingManager *)sharedUtil;
 
 /**
  * iOS自带网络请求框架
