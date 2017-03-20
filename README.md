@@ -9,9 +9,9 @@ TFNetworking
 
 ## What
 
-TFNetworking is is a high level request util based on [AFNetworking][AFNetworking]. It's developed by the iOS Team of Dabay. It provides a High Level API for network request.
+TFNetworking is is a high level request util based on AFNetworking. It's developed by the iOS Team of Dabay. It provides a High Level API for network request.TFNetworking is used in all products of Dabay.
 
-TFNetworking is used in all products of Dabay.
+
 
 [**中文说明**](Docs/README_cn.md)
 
@@ -23,8 +23,6 @@ TFNetworking is used in all products of Dabay.
 * Validate JSON response
 * Resume download
 * `block` and `delegate` callback
-* Batch requests (see `YTKBatchRequest`)
-* Chain requests (see `YTKChainRequest`)
 * URL filter, replace part of URL, or append common parameter 
 * Plugin mechanism, handle request start and finish. A plugin for show "Loading" HUD is provided
 
@@ -32,7 +30,7 @@ TFNetworking is used in all products of Dabay.
 
 TFNetworking is suitable for a slightly more complex project, not for a simple personal project.
 
-TFNetworking is helpful if you want to cache requests, manage the dependences of requests, or validate the JSON response. And if you want to cache requests based on request version, this is one of the greatest advantages of YTKNetwork.
+TFNetworking is helpful if you want to cache requests, manage the dependences of requests, or validate the JSON response. And if you want to cache requests based on request version, this is one of the greatest advantages of TFNetworking.
 
 ## Why 
 
@@ -40,7 +38,7 @@ TFNetworking provides YTKRequest to handle every network request. You should inh
 
 The main idea is use the Command Pattern. The benefits are:
 
- * Your code is decoupled to detail network request framework, it's easy to replace it. Actually, YTKNetwork is originally based on ASIHttpRequest, we just spent two days to switch to AFNetworking.
+ * Your code is decoupled to detail network request framework, it's easy to replace it. Actually, TFNetworking is originally based on ASIHttpRequest, we just spent two days to switch to AFNetworking.
  * Handle common logic in base class.
  * Easier Persistence
 
