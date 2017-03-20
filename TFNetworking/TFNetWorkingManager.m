@@ -17,10 +17,6 @@
     
     static dispatch_once_t  onceToken;
     static TFNetWorkingManager * setSharedInstance;
-    //线程锁
-//    @synchronized (self) {
-//        setSharedInstance = [[JHNetWorkTools alloc] init];
-//    }
     dispatch_once(&onceToken, ^{
         setSharedInstance = [[TFNetWorkingManager alloc] init];
         
@@ -237,6 +233,7 @@
             
             //将读取到的证书设置为serverTrust的根证书
             OSStatus status = SecTrustSetAnchorCertificates(serverTrust, (__bridge CFArrayRef)caArray);
+            NSLog("OSStatus---TF---%@",OSStatus);
             SecTrustSetAnchorCertificatesOnly(serverTrust, NO);
             NSCAssert(errSecSuccess == status, @"SectrustSetAnchorCertificates failed");
             
