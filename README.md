@@ -13,8 +13,6 @@ TFNetworking is is a high level request util based on AFNetworking. It's develop
 
 
 
-[**中文说明**](Docs/README_cn.md)
-
 ## Features
 
 * Response can be cached by expiration time
