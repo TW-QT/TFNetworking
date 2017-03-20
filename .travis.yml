@@ -1,0 +1,32 @@
+language: objective-c
+osx_image: xcode8
+cache:
+  - cocoapods
+  - bundler
+env:
+  matrix:
+    - TEST_TYPE=iOS
+    - TEST_TYPE=macOS
+    - TEST_TYPE=tvOS
+before_install:
+- |
+  brew update
+  brew install carthage
+  carthage bootstrap
+  if [ "$TEST_TYPE" = iOS ] || [ "$TEST_TYPE" = macOS ] || [ "$TEST_TYPE" = tvOS ]; then
+    gem install xcpretty --no-ri --no-rdoc --no-document --quiet
+  elif [ "$TEST_TYPE" = CocoaPods ]; then
+    gem install cocoapods --no-ri --no-rdoc --no-document --quiet
+  fi
+script:
+- |
+  if [ "$TEST_TYPE" = iOS ]; then
+    set -o pipefail
+    xcodebuild test -scheme "TFNetworking iOS" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 6" -skip-testing:"TFNetworking iOSTests"TFPerformanceTests -skip-testing:"TFNetworking iOSTests"/TFResumableDownloadTests | xcpretty -c
+  elif [ "$TEST_TYPE" = macOS ]; then
+    set -o pipefail
+    xcodebuild test -scheme "TFNetworking macOS" -sdk macosx -skip-testing:"TFNetworking macOSTests"/YTKPerformanceTests -skip-testing:"TFNetworking macOSTests"/TFResumableDownloadTests | xcpretty -c
+  elif [ "$TEST_TYPE" = tvOS ]; then
+    set -o pipefail
+    xcodebuild test -scheme "TFNetworking tvOS" -sdk appletvsimulator -destination "platform=tvOS Simulator,name=Apple TV 1080p" -skip-testing:"TFNetworking tvOSTests"/TFPerformanceTests -skip-testing:"TFNetworking tvOSTests"/TFResumableDownloadTests | xcpretty -c
+  fi

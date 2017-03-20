@@ -2,10 +2,10 @@ TFNetworking
 ==========
 
 ![License MIT](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)
-![Pod version](https://img.shields.io/cocoapods/v/YTKNetwork.svg?style=flat)
+![Pod version](https://img.shields.io/cocoapods/v/TFNetworking.svg?style=flat)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Platform info](https://img.shields.io/cocoapods/p/YTKNetwork.svg?style=flat)](http://cocoadocs.org/docsets/TFNetworking)
-[![Build Status](https://api.travis-ci.org/yuantiku/YTKNetwork.svg?branch=master)](https://travis-ci.org/yuantiku/TFNetworking)
+[![Platform info](https://img.shields.io/cocoapods/p/TFNetworking.svg?style=flat)](http://cocoadocs.org/docsets/TFNetworking)
+[![Build Status](https://api.travis-ci.org/yuantiku/TFNetworking.svg?branch=master)](https://travis-ci.org/yuantiku/TFNetworking)
 
 ## What
 
@@ -54,7 +54,7 @@ To use TFNetworking add the following to your Podfile
 
 Or add this in your Cartfile:
 
-    github "Donkey-Tao/TFNetworking" ~> 0.0.4
+    github "Donkey-Tao/TFNetworking" ~> 0.0.6
 
 ## Requirements
 
