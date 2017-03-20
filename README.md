@@ -5,7 +5,7 @@ TFNetworking
 ![Pod version](https://img.shields.io/cocoapods/v/TFNetworking.svg?style=flat)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Platform info](https://img.shields.io/cocoapods/p/TFNetworking.svg?style=flat)](http://cocoadocs.org/docsets/TFNetworking)
-[![Build Status](https://api.travis-ci.org/yuantiku/TFNetworking.svg?branch=master)](https://travis-ci.org/Donkey-Tao/TFNetworking)
+[![Build Status](https://api.travis-ci.org/Donkey-Tao/TFNetworking.svg?branch=master)](https://travis-ci.org/Donkey-Tao/TFNetworking)
 
 ## What
 
