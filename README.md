@@ -5,13 +5,13 @@ TFNetworking
 ![Pod version](https://img.shields.io/cocoapods/v/TFNetworking.svg?style=flat)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Platform info](https://img.shields.io/cocoapods/p/TFNetworking.svg?style=flat)](http://cocoadocs.org/docsets/TFNetworking)
-[![Build Status](https://api.travis-ci.org/yuantiku/TFNetworking.svg?branch=master)](https://travis-ci.org/yuantiku/TFNetworking)
+[![Build Status](https://api.travis-ci.org/yuantiku/TFNetworking.svg?branch=master)](https://travis-ci.org/Donkey-Tao/TFNetworking)
 
 ## What
 
 TFNetworking is is a high level request util based on [AFNetworking][AFNetworking]. It's developed by the iOS Team of Dabay. It provides a High Level API for network request.
 
-TFNetworking is used in all products of YuanTiKu, including: [YuanTiKu][YuanTiKu], [YuanSoTi][YuanSoTi], [YuanFuDao][YuanFuDao], [FenBiZhiBoKe][FenBiZhiBoKe].
+TFNetworking is used in all products of Dabay.
 
 [**中文说明**](Docs/README_cn.md)
 
