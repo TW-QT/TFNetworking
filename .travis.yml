@@ -1,0 +1,4 @@
+language: objective-c
+xcode_project: ./TFNetworkingDemo.xcodeproj
+xcode_scheme: TFNetworkingDemo
+osx_image: xcode8
