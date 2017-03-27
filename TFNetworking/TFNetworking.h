@@ -21,10 +21,23 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#ifndef TFNetworking_h
-#define TFNetworking_h
+#import <Foundation/Foundation.h>
+#import <Availability.h>
+#import <TargetConditionals.h>
 
-#import "TFNetWorkingManager.h"
+#ifndef _TFNETWORKING_
+    #define _TFNETWORKING_
 
+    #import "TFURLRequestSerialization.h"
+    #import "TFURLResponseSerialization.h"
+    #import "TFSecurityPolicy.h"
 
-#endif /* TFNetworking_h */
+#if !TARGET_OS_WATCH
+    #import "TFNetworkReachabilityManager.h"
+#endif
+
+    #import "TFURLSessionManager.h"
+    #import "TFHTTPSessionManager.h"
+    #import "TFNetWorkingManager.h"
+
+#endif /* _TFNETWORKING_ */
