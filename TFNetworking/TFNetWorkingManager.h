@@ -9,57 +9,102 @@
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
 
-typedef void (^SuccessBlock)(id responseObject);
-typedef void (^FailedBlock)(NSError*error);
 
-#define BASE_URL @"http://112.74.100.122:9087/hct/api/"
-#pragma mark 网络请求类型
+NS_ASSUME_NONNULL_BEGIN
+
+
+///-----------------------------------
+/// @name Some Preferences Infomation
+///-----------------------------------
 
 typedef NS_ENUM(NSInteger,HTTPMETHOD)
 {
-    METHOD_GET   = 0,    //GET请求
-    METHOD_POST  = 1,    //POST请求
-};
+    METHOD_GET   = 0,
+    METHOD_POST  = 1,
+};//网络请求方式:GET OR POST
+
+//网络请求的基地址
+NSString * const TFBaseURLString = @"http://112.74.100.122:9087/hct/api/";
+#define BASE_URL TFBaseURLString
+
+//网络请求的回调
+typedef void (^SuccessBlock)(id responseObject);
+typedef void (^FailedBlock)(NSError*error);
+
+
+
 
 
 @interface TFNetWorkingManager : NSObject
 
-
 /**
- *  类方法
+ *  TFNetworkingManager的类方法，创建并获取TFNetworkingManager的单例对象
  */
-+ (TFNetWorkingManager *)sharedUtil;
++ (instancetype)sharedManager;
 
 /**
- * iOS自带网络请求框架
+ * @brief iOS自带网络请求框架
+ * @param urlstring URL地址的字符串
+ * @param method URL地址的字符串
+ * @param params 请求中使用的参数
+ * @param SuccessBlock 请求成功的回调
+ * @param failedBlock 请求失败的回调
  */
 + (void)requestURL:(NSString *)urlstring httpMethod:(NSInteger)method params:(NSMutableDictionary *)params complection:(SuccessBlock)SuccessBlock failed:(FailedBlock)failedBlock;
+
 /**
- *  AF数据请求(HTTP)
+ * @brief AFNetworking数据请求(HTTP)
+ * @param URLString URL地址的字符串
+ * @param method URL地址的字符串
+ * @param parameters 请求中使用的参数
+ * @param successBlock 请求成功的回调
+ * @param failedBlock 请求失败的回调
  */
 +(void)requestAFURL:(NSString *)URLString httpMethod:(NSInteger)method parameters:(id)parameters succeed:(SuccessBlock)successBlock failure:(FailedBlock)failedBlock;
 
 /**
- *  AF 网络请求（HTTPS）
+ * @brief AFNetworking网络请求(HTTPS)
+ * @param URLString URL地址的字符串
+ * @param method URL地址的字符串
+ * @param parameters 请求中使用的参数
+ * @param successBlock 请求成功的回调
+ * @param failedBlock 请求失败的回调
  */
 + (void)requestAFURL:(NSString *)URLString httpMethod:(NSInteger)method Signature:(NSString *)signature Parameters:(NSDictionary *)parameters RequestTimes:(float)requestTimes succeed:(SuccessBlock)successBlock failure:(FailedBlock)failedBlock;
+
 /**
- * 上传单张图片
+ * @brief 上传单张图片
+ * @param URLString URL地址的字符串
+ * @param imageData URL地址的字符串
+ * @param parameters 请求中使用的参数
+ * @param successBlock 请求成功的回调
+ * @param failedBlock 请求失败的回调
  */
 +(void)requestAFURL:(NSString *)URLString parameters:(id)parameters imageData:(NSData *)imageData succeed:(SuccessBlock)successBlock failure:(FailedBlock)failedBlock;
 
 
 /**
- * 上传多张图片
+ * @brief 上传多张图片
+ * @param URLString URL地址的字符串
+ * @param parameters 请求中使用的参数
+ * @param imageDataArray URL地址的字符串
+ * @param successBlock 请求成功的回调
+ * @param failedBlock 请求失败的回调
  */
 +(void)requestAFURL:(NSString *)URLString parameters:(id)parameters  imageDataArray:(NSArray *)imageDataArray succeed:(SuccessBlock)successBlock failure:(FailedBlock)failedBlock;
 
+
 /**
- * 上传文件
+ * @brief 上传文件
+ * @param URLString URL地址的字符串
+ * @param parameters 请求中使用的参数
+ * @param fileData URL地址的字符串
+ * @param successBlock 请求成功的回调
+ * @param failedBlock 请求失败的回调
  */
 +(void)requestAFURL:(NSString *)URLString parameters:(id)parameters fileData:(NSData *)fileData succeed:(SuccessBlock)successBlock  failure:(FailedBlock)failedBlock;
 
-/*json
+/* json
  * @brief 把格式化的JSON格式的字符串转换成字典
  * @param jsonString JSON格式的字符串
  * @return 返回字典
@@ -75,3 +120,6 @@ typedef NS_ENUM(NSInteger,HTTPMETHOD)
 +(NSString*)URLEncryOrDecryString:(NSDictionary *)paramDict IsHead:(BOOL)_type;
 
 @end
+
+
+NS_ASSUME_NONNULL_END

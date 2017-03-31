@@ -13,13 +13,12 @@
 /**
  *  类方法
  */
-+ (TFNetWorkingManager *)sharedUtil {
++ (instancetype)sharedManager {
     
     static dispatch_once_t  onceToken;
     static TFNetWorkingManager * setSharedInstance;
     dispatch_once(&onceToken, ^{
         setSharedInstance = [[TFNetWorkingManager alloc] init];
-        
     });
     return setSharedInstance;
 }
@@ -233,7 +232,7 @@
             
             //将读取到的证书设置为serverTrust的根证书
             OSStatus status = SecTrustSetAnchorCertificates(serverTrust, (__bridge CFArrayRef)caArray);
-            NSLog("OSStatus---TF---%@",OSStatus);
+            NSLog(@"OSStatus---TF---%d",(int)status);
             SecTrustSetAnchorCertificatesOnly(serverTrust, NO);
             NSCAssert(errSecSuccess == status, @"SectrustSetAnchorCertificates failed");
             
