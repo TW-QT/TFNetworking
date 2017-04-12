@@ -61,10 +61,6 @@ TFNetworking is based on AFNetworking. You can find more detail about version co
  * [Basic Usage Guide](Docs/BasicGuide_en.md)
  * [TFNetworking 2.0 Migration Guide(Simplified Chinese)](Docs/2.0_MigrationGuide_cn.md)
 
-## Contributors
-
- * [lancy][lancyGithub]
-
 
 ## Acknowledgements
 
