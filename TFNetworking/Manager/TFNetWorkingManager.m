@@ -274,6 +274,7 @@
             OSStatus status = SecTrustSetAnchorCertificates(serverTrust, (__bridge CFArrayRef)caArray);
             SecTrustSetAnchorCertificatesOnly(serverTrust, NO);
             NSCAssert(errSecSuccess == status, @"SectrustSetAnchorCertificates failed");
+            NSLog(@"status=%d",(int)status);
             
             //选择质询认证的处理方式
             NSURLSessionAuthChallengeDisposition disposition = NSURLSessionAuthChallengePerformDefaultHandling;
