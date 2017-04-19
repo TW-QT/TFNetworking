@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
+#import <MBProgressHUD/MBProgressHUD.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
