@@ -2,12 +2,11 @@
 //  ViewController.m
 //  TFNetworkingDemo
 //
-//  Created by dabay on 2017/3/17.
-//  Copyright © 2017年 dabay. All rights reserved.
+//  Created by Dabay on 2017/4/19.
+//  Copyright © 2017年 Donkey-Tao. All rights reserved.
 //
 
 #import "ViewController.h"
-#import <TFNetworking.h>
 
 @interface ViewController ()
 
@@ -17,9 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [TFNetWorkingManager sharedUtil];
-    
     // Do any additional setup after loading the view, typically from a nib.
 }
 

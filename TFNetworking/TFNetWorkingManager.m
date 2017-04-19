@@ -20,7 +20,7 @@
  
  @return TFNetworking总的管理者单例对象
  */
-+ (TFNetWorkingManager *)sharedUtil {
++ (TFNetWorkingManager *)sharedManager {
     
     static dispatch_once_t  onceToken;
     static TFNetWorkingManager * setSharedInstance;
@@ -528,8 +528,8 @@
 
 
 
-#pragma mark - 字符串与JSON的转换
 
+#pragma mark - 字符串与JSON的转换
 
 /**
  把格式化的JSON格式的字符串转换成字典
@@ -555,14 +555,11 @@
 }
 
 
-
-
-
 /**
  把字典转换成字符串
  
  @param paramDict 字典
- @param _type
+ @param _type 类型
  @return 返回字典对应的字符串
  */
 +(NSString*)URLEncryOrDecryString:(NSDictionary *)paramDict IsHead:(BOOL)_type
