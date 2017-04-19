@@ -17,10 +17,10 @@
 
 /**
  TFNetworking总的管理者
-
+ 
  @return TFNetworking总的管理者单例对象
  */
-+ (TFNetWorkingManager *)sharedUtil {
++ (TFNetWorkingManager *)sharedManager {
     
     static dispatch_once_t  onceToken;
     static TFNetWorkingManager * setSharedInstance;
@@ -40,7 +40,7 @@
 
 /**
  iOS自带网络请求框架
-
+ 
  @param urlstring 网络请求的URL地址字符串
  @param method 网络请求的方式：GET/POST
  @param params 网络请求的参数
@@ -133,7 +133,7 @@
 
 /**
  AF网络请求 (HTTP)
-
+ 
  @param URLString 网络请求的URL地址字符串
  @param method 网络请求的方式：GET/POST
  @param parameters 网络请求的参数
@@ -211,7 +211,7 @@
 
 /**
  AF 网络请求（HTTPS）
-
+ 
  @param URLString 网络请求的URL地址字符串
  @param method 网络请求的方式：GET/POST
  @param signature HTTPS证书的名称
@@ -356,12 +356,11 @@
 
 #pragma mark - 上传图片
 
-
 /**
  上传单张图片
 
  @param URLString URL字符串
- @param parameters 网络请求参数
+ @param parameters 网络请求的参数
  @param imageData 上传的图片数据
  @param successBlock 网络请求成功的回调
  @param failedBlock 网络请求失败的回调
@@ -419,7 +418,7 @@
 
 /**
  上传多张图片
-
+ 
  @param URLString URL字符串
  @param parameters 网络请求参数
  @param imageDataArray 上传的图片数组
@@ -485,7 +484,7 @@
 
 /**
  上传文件
-
+ 
  @param URLString URL字符串
  @param parameters 网络请求参数
  @param fileData 上传的文件数据
@@ -535,12 +534,12 @@
 
 
 
-#pragma mark - 字符串与JSON的转换
 
+#pragma mark - 字符串与JSON的转换
 
 /**
  把格式化的JSON格式的字符串转换成字典
-
+ 
  @param jsonString JSON格式的字符串
  @return 返回字典
  */
@@ -562,14 +561,11 @@
 }
 
 
-
-
-
 /**
  把字典转换成字符串
-
+ 
  @param paramDict 字典
- @param _type
+ @param _type 类型
  @return 返回字典对应的字符串
  */
 +(NSString*)URLEncryOrDecryString:(NSDictionary *)paramDict IsHead:(BOOL)_type

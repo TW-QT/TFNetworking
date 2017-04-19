@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
 
-
 NS_ASSUME_NONNULL_BEGIN
 
 
@@ -42,8 +41,11 @@ typedef void (^FailedBlock)(NSError*error);
 
 #pragma mark - 获取TFNetworking的单例对象
 
+
+
 /**
- *  TFNetworkingManager的类方法，创建并获取TFNetworkingManager的单例对象
+ * @brief TFNetworkingManager的类方法，创建并获取TFNetworkingManager的单例对象
+ * @return 返回类型为TFNetWorkingManager的单例对象
  */
 + (instancetype)sharedManager;
 
