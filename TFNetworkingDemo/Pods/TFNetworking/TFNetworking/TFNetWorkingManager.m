@@ -356,8 +356,15 @@
 
 #pragma mark - 上传图片
 
+
 /**
- * 上传单张图片
+ 上传单张图片
+
+ @param URLString URL字符串
+ @param parameters 网络请求参数
+ @param imageData 上传的图片数据
+ @param successBlock 网络请求成功的回调
+ @param failedBlock 网络请求失败的回调
  */
 +(void)requestAFURL:(NSString *)URLString
          parameters:(id)parameters
