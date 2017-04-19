@@ -10,21 +10,42 @@
 
 
 @implementation TFNetWorkingManager
+
+
+#pragma mark - 获取TFNetworking的单例对象
+
+
 /**
- *  类方法
+ TFNetworking总的管理者
+ 
+ @return TFNetworking总的管理者单例对象
  */
-+ (instancetype)sharedManager {
++ (TFNetWorkingManager *)sharedUtil {
     
     static dispatch_once_t  onceToken;
     static TFNetWorkingManager * setSharedInstance;
+    //线程锁
     dispatch_once(&onceToken, ^{
         setSharedInstance = [[TFNetWorkingManager alloc] init];
     });
     return setSharedInstance;
 }
 
+
+
+
+
+#pragma mark - 网络请求方法
+
+
 /**
- * iOS自带网络请求框架
+ iOS自带网络请求框架
+ 
+ @param urlstring 网络请求的URL地址字符串
+ @param method 网络请求的方式：GET/POST
+ @param params 网络请求的参数
+ @param SuccessBlock 网络请求成功的回调
+ @param failedBlock 网络请求失败的回调
  */
 + (void)requestURL:(NSString *)urlstring
         httpMethod:(NSInteger)method
@@ -109,8 +130,15 @@
 }
 
 
+
 /**
- * AF网络请求 (HTTP)
+ AF网络请求 (HTTP)
+ 
+ @param URLString 网络请求的URL地址字符串
+ @param method 网络请求的方式：GET/POST
+ @param parameters 网络请求的参数
+ @param successBlock 网络请求成功的回调
+ @param failedBlock 网络请求失败的回调
  */
 +(void)requestAFURL:(NSString *)URLString
          httpMethod:(NSInteger)method
@@ -177,8 +205,20 @@
             break;
     }
 }
+
+
+
+
 /**
- *  AF 网络请求（HTTPS）
+ AF 网络请求（HTTPS）
+ 
+ @param URLString 网络请求的URL地址字符串
+ @param method 网络请求的方式：GET/POST
+ @param signature HTTPS证书的名称
+ @param parameters 网络请求的参数
+ @param requestTimes 网络请求的时间
+ @param successBlock 网络请求成功的回调
+ @param failedBlock 网络请求失败的回调
  */
 + (void)requestAFURL:(NSString *)URLString httpMethod:(NSInteger)method Signature:(NSString *)signature Parameters:(NSDictionary *)parameters RequestTimes:(float)requestTimes succeed:(SuccessBlock)successBlock failure:(FailedBlock)failedBlock{
     
@@ -199,9 +239,9 @@
     manager = [[AFHTTPSessionManager alloc]initWithBaseURL:[NSURL URLWithString:URLString]];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     manager.securityPolicy = securityPolicy;
-
+    
     [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
-     manager.requestSerializer.timeoutInterval = requestTimes;
+    manager.requestSerializer.timeoutInterval = requestTimes;
     [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
     
     if (URLString != nil){
@@ -232,7 +272,6 @@
             
             //将读取到的证书设置为serverTrust的根证书
             OSStatus status = SecTrustSetAnchorCertificates(serverTrust, (__bridge CFArrayRef)caArray);
-            NSLog(@"OSStatus---TF---%d",(int)status);
             SecTrustSetAnchorCertificatesOnly(serverTrust, NO);
             NSCAssert(errSecSuccess == status, @"SectrustSetAnchorCertificates failed");
             
@@ -312,6 +351,11 @@
     
 }
 
+
+
+
+#pragma mark - 上传图片
+
 /**
  * 上传单张图片
  */
@@ -364,8 +408,16 @@
 }
 
 
+
+
 /**
- * 上传多张图片
+ 上传多张图片
+ 
+ @param URLString URL字符串
+ @param parameters 网络请求参数
+ @param imageDataArray 上传的图片数组
+ @param successBlock 网络请求成功的回调
+ @param failedBlock 网络请求失败的回调
  */
 +(void)requestAFURL:(NSString *)URLString
          parameters:(id)parameters
@@ -423,8 +475,15 @@
 }
 
 
+
 /**
- * 上传文件
+ 上传文件
+ 
+ @param URLString URL字符串
+ @param parameters 网络请求参数
+ @param fileData 上传的文件数据
+ @param successBlock 网络请求成功的回调
+ @param failedBlock 网络请求失败的回调
  */
 +(void)requestAFURL:(NSString *)URLString
          parameters:(id)parameters
@@ -468,10 +527,15 @@
 }
 
 
-/*json
- * @brief 把格式化的JSON格式的字符串转换成字典
- * @param jsonString JSON格式的字符串
- * @return 返回字典
+
+#pragma mark - 字符串与JSON的转换
+
+
+/**
+ 把格式化的JSON格式的字符串转换成字典
+ 
+ @param jsonString JSON格式的字符串
+ @return 返回字典
  */
 +(NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString {
     if (jsonString == nil) {
@@ -491,10 +555,15 @@
 }
 
 
-/*json
- * @brief 把字典转换成字符串
- * @param jsonString JSON格式的字符串
- * @return 返回字符串
+
+
+
+/**
+ 把字典转换成字符串
+ 
+ @param paramDict 字典
+ @param _type
+ @return 返回字典对应的字符串
  */
 +(NSString*)URLEncryOrDecryString:(NSDictionary *)paramDict IsHead:(BOOL)_type
 {
