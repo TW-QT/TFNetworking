@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
-#import <MBProgressHUD/MBProgressHUD.h>
+
 
 NS_ASSUME_NONNULL_BEGIN
 
 
-///-----------------------------------
+///---------------------------------------------------
 /// @name Some Preferences Infomation
-///-----------------------------------
+///---------------------------------------------------
 
 typedef NS_ENUM(NSInteger,HTTPMETHOD)
 {
@@ -24,8 +24,7 @@ typedef NS_ENUM(NSInteger,HTTPMETHOD)
 };//网络请求方式:GET OR POST
 
 //网络请求的基地址
-NSString * const TFBaseURLString = @"http://112.74.100.122:9087/hct/api/";
-#define BASE_URL TFBaseURLString
+#define BASE_URL @"http://112.74.100.122:9087/hct/api/"
 
 //网络请求的回调
 typedef void (^SuccessBlock)(id responseObject);
@@ -33,9 +32,9 @@ typedef void (^FailedBlock)(NSError*error);
 
 
 
-///--------------------------------------------------
+///----------------------------------------------------
 /// @name Method declarations of TFNetWorkingManager
-///--------------------------------------------------
+///----------------------------------------------------
 
 @interface TFNetWorkingManager : NSObject
 
@@ -124,7 +123,7 @@ typedef void (^FailedBlock)(NSError*error);
 
 #pragma mark - 字符串与JSON的转换
 
-/* json
+/**
  * @brief 把格式化的JSON格式的字符串转换成字典
  * @param jsonString JSON格式的字符串
  * @return 返回字典
@@ -132,9 +131,10 @@ typedef void (^FailedBlock)(NSError*error);
 + (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
 
 
-/*json
+/**
  * @brief 把字典转换成字符串
- * @param jsonString JSON格式的字符串
+ * @param paramDict 字典
+ * @param _type 类型
  * @return 返回字符串
  */
 +(NSString*)URLEncryOrDecryString:(NSDictionary *)paramDict IsHead:(BOOL)_type;
