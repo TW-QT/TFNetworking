@@ -28,18 +28,9 @@ typedef NS_ENUM(NSInteger,HTTPMETHOD)
     METHOD_GET   = 0,
     METHOD_POST  = 1,
 };
-
-
-/**
- @brief 网络请求成功的回调
- @param responseObject 网络请求成功回调时获取的返回数据
- */
+/** 网络请求成功的回调 */
 typedef void (^SuccessBlock)(id responseObject);
-
-/**
- @brief 网络请求失败的回调
- @param error 网络请求失败的原因
- */
+/** 网络请求失败的回调 */
 typedef void (^FailedBlock)(NSError*error);
 
 
@@ -48,13 +39,11 @@ typedef void (^FailedBlock)(NSError*error);
 /// @name Method declarations of TFNetWorkingManager
 ///----------------------------------------------------
 
-/**
- TFNetWorkingManager是继承自TFHTTPSessionManager的子类，是在TFHTTPSessionManager基础上进行的封装。
- */
+/** TFNetWorkingManager是继承自TFHTTPSessionManager的子类，是在TFHTTPSessionManager基础上进行的封装。 */
 @interface TFNetWorkingManager : TFHTTPSessionManager
 
 #pragma mark - TFNetworkingManager的属性
-//整个项目的网络请求的URL的基地址
+/** 整个项目的网络请求的URL的基地址 */
 @property (readonly, nonatomic, copy, nullable) NSString *baseURLString;
 
 

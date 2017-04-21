@@ -27,12 +27,17 @@
     //线程锁
     dispatch_once(&onceToken, ^{
         setSharedInstance = [[TFNetWorkingManager alloc] init];
+        [setSharedInstance managerInitialize];
     });
     return setSharedInstance;
 }
 
+#pragma mark -TFNetworkingManager类的单例对象的初始化
 
-
+/** TFNetworkingManager类的单例对象的初始化 */
+-(void)managerInitialize{
+    self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain", nil];
+}
 
 
 #pragma mark - 网络请求方法
@@ -54,8 +59,8 @@
     
     //1.构造URL
     urlstring = [[TFNetWorkingManager sharedManager].baseURLString stringByAppendingString:urlstring];
-    
     NSURL *url = [NSURL URLWithString:urlstring];
+
     
     //2.构造request
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
