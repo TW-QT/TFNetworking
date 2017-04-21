@@ -53,7 +53,8 @@
        complection:(SuccessBlock)SuccessBlock failed:(FailedBlock)failedBlock{
     
     //1.构造URL
-    urlstring = [BASE_URL stringByAppendingString:urlstring];
+    urlstring = [[TFNetWorkingManager sharedManager].baseURLString stringByAppendingString:urlstring];
+    
     NSURL *url = [NSURL URLWithString:urlstring];
     
     //2.构造request
@@ -147,7 +148,7 @@
             failure:(FailedBlock)failedBlock
 {
     // 0.设置API地址
-    URLString = [NSString stringWithFormat:@"%@%@",BASE_URL,[URLString stringByReplacingOccurrencesOfString:@" " withString:@"%20"]];
+    URLString = [NSString stringWithFormat:@"%@%@",[TFNetWorkingManager sharedManager].baseURLString,[URLString stringByReplacingOccurrencesOfString:@" " withString:@"%20"]];
     NSLog(@"\n AF网络请求参数列表:%@\n\n 接口名: %@\n\n",parameters,URLString);
     
     // 1.创建请求管理者
@@ -373,7 +374,7 @@
             failure:(FailedBlock)failedBlock
 {
     // 0.设置API地址
-    URLString = [NSString stringWithFormat:@"%@%@",BASE_URL,[URLString stringByReplacingOccurrencesOfString:@" " withString:@"%20"]];
+    URLString = [NSString stringWithFormat:@"%@%@",[TFNetWorkingManager sharedManager].baseURLString,[URLString stringByReplacingOccurrencesOfString:@" " withString:@"%20"]];
     NSLog(@"\n POST上传单张图片参数列表:%@\n\n%@\n",parameters,[TFNetWorkingManager URLEncryOrDecryString:parameters IsHead:false]);
     
     // 1.创建请求管理者
@@ -433,7 +434,7 @@
             failure:(FailedBlock)failedBlock
 {
     // 0.设置API地址
-    URLString = [NSString stringWithFormat:@"%@%@",BASE_URL,[URLString stringByReplacingOccurrencesOfString:@" " withString:@"%20"]];
+    URLString = [NSString stringWithFormat:@"%@%@",[TFNetWorkingManager sharedManager].baseURLString,[URLString stringByReplacingOccurrencesOfString:@" " withString:@"%20"]];
     NSLog(@"\n POST上传多张图片参数列表:%@\n\n%@\n",parameters,[TFNetWorkingManager URLEncryOrDecryString:parameters IsHead:false]);
     
     // 1.创建请求管理者
@@ -499,7 +500,7 @@
             failure:(FailedBlock)failedBlock
 {
     // 0.设置API地址
-    URLString = [NSString stringWithFormat:@"%@%@",BASE_URL,[URLString stringByReplacingOccurrencesOfString:@" " withString:@"%20"]];
+    URLString = [NSString stringWithFormat:@"%@%@",[TFNetWorkingManager sharedManager].baseURLString,[URLString stringByReplacingOccurrencesOfString:@" " withString:@"%20"]];
     
     // NSLog(@"\n POST上传文件参数列表:%@\n\n%@\n",parameters,[Utilit URLEncryOrDecryString:parameters IsHead:false]);
     

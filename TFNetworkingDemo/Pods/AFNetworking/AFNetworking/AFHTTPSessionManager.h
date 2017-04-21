@@ -125,6 +125,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithBaseURL:(nullable NSURL *)url
            sessionConfiguration:(nullable NSURLSessionConfiguration *)configuration NS_DESIGNATED_INITIALIZER;
 
+
+#pragma mark - GET请求
 ///---------------------------
 /// @name Making HTTP Requests
 ///---------------------------
@@ -162,6 +164,9 @@ NS_ASSUME_NONNULL_BEGIN
                                success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
                                failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure;
 
+
+
+#pragma  mark - HEAD带特定字符串的请求
 /**
  Creates and runs an `NSURLSessionDataTask` with a `HEAD` request.
 
@@ -177,6 +182,10 @@ NS_ASSUME_NONNULL_BEGIN
                        success:(nullable void (^)(NSURLSessionDataTask *task))success
                        failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure;
 
+
+
+
+#pragma mark - POST请求
 /**
  Creates and runs an `NSURLSessionDataTask` with a `POST` request.
 

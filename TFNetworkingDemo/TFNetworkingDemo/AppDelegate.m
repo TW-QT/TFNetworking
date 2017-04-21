@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TFNetWorkingManager.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+
+    TFNetWorkingManager *manager=[TFNetWorkingManager sharedManager];
+    
+    
     return YES;
 }
 

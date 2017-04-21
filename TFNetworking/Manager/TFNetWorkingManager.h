@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
+#import "TFNetworking.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -17,17 +18,28 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Some Preferences Infomation
 ///---------------------------------------------------
 
+/**
+ * @brief 定义枚举类型的网络请求类型：GET OR POST
+ * METHOD_GET: 网络请求方式为GET
+ * METHOD_POST: 网络请求方式为POST
+ */
 typedef NS_ENUM(NSInteger,HTTPMETHOD)
 {
     METHOD_GET   = 0,
     METHOD_POST  = 1,
-};//网络请求方式:GET OR POST
+};
 
-//网络请求的基地址
-#define BASE_URL @"http://112.74.100.122:9087/hct/api/"
 
-//网络请求的回调
+/**
+ @brief 网络请求成功的回调
+ @param responseObject 网络请求成功回调时获取的返回数据
+ */
 typedef void (^SuccessBlock)(id responseObject);
+
+/**
+ @brief 网络请求失败的回调
+ @param error 网络请求失败的原因
+ */
 typedef void (^FailedBlock)(NSError*error);
 
 
@@ -36,13 +48,17 @@ typedef void (^FailedBlock)(NSError*error);
 /// @name Method declarations of TFNetWorkingManager
 ///----------------------------------------------------
 
-@interface TFNetWorkingManager : NSObject
+/**
+ TFNetWorkingManager是继承自TFHTTPSessionManager的子类，是在TFHTTPSessionManager基础上进行的封装。
+ */
+@interface TFNetWorkingManager : TFHTTPSessionManager
+
+#pragma mark - TFNetworkingManager的属性
+//整个项目的网络请求的URL的基地址
+@property (readonly, nonatomic, copy, nullable) NSString *baseURLString;
 
 
 #pragma mark - 获取TFNetworking的单例对象
-
-
-
 /**
  * @brief TFNetworkingManager的类方法，创建并获取TFNetworkingManager的单例对象
  * @return 返回类型为TFNetWorkingManager的单例对象
