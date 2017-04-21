@@ -7,95 +7,95 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		86E552ED1EA744C00027DADC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E552EC1EA744C00027DADC /* main.m */; };
-		86E552F01EA744C00027DADC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E552EF1EA744C00027DADC /* AppDelegate.m */; };
-		86E552F61EA744C00027DADC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E552F41EA744C00027DADC /* Main.storyboard */; };
-		86E552F81EA744C00027DADC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86E552F71EA744C00027DADC /* Assets.xcassets */; };
-		86E552FB1EA744C00027DADC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E552F91EA744C00027DADC /* LaunchScreen.storyboard */; };
-		86E553061EA744C00027DADC /* TFNetworkingDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E553051EA744C00027DADC /* TFNetworkingDemoTests.m */; };
-		86E553111EA744C00027DADC /* TFNetworkingDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E553101EA744C00027DADC /* TFNetworkingDemoUITests.m */; };
-		86E553211EA744FF0027DADC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E553201EA744FF0027DADC /* ViewController.m */; };
-		86E5541E1EA746220027DADC /* TFNetWorkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E5540C1EA746220027DADC /* TFNetWorkingManager.m */; };
-		86E5541F1EA746220027DADC /* TFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E5540F1EA746220027DADC /* TFNetworkReachabilityManager.m */; };
-		86E554201EA746220027DADC /* TFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E554121EA746220027DADC /* TFSecurityPolicy.m */; };
-		86E554211EA746220027DADC /* TFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E554151EA746220027DADC /* TFURLRequestSerialization.m */; };
-		86E554221EA746220027DADC /* TFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E554171EA746220027DADC /* TFURLResponseSerialization.m */; };
-		86E554231EA746220027DADC /* TFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E5541A1EA746220027DADC /* TFHTTPSessionManager.m */; };
-		86E554241EA746220027DADC /* TFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E5541C1EA746220027DADC /* TFURLSessionManager.m */; };
-		EEA498A3E549BE6A8D9BDA97 /* libPods-TFNetworkingDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C279A44C0766B2C124C0AFD /* libPods-TFNetworkingDemo.a */; };
+		40129E5AAC865E980E9C7159 /* libPods-TFNetworkingDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 742F6DC090C4FDD12598BD09 /* libPods-TFNetworkingDemo.a */; };
+		862D42E91EA9EDEF00A441B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 862D42E81EA9EDEF00A441B0 /* main.m */; };
+		862D42EC1EA9EDEF00A441B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 862D42EB1EA9EDEF00A441B0 /* AppDelegate.m */; };
+		862D42F21EA9EDEF00A441B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 862D42F01EA9EDEF00A441B0 /* Main.storyboard */; };
+		862D42F41EA9EDEF00A441B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 862D42F31EA9EDEF00A441B0 /* Assets.xcassets */; };
+		862D42F71EA9EDEF00A441B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 862D42F51EA9EDEF00A441B0 /* LaunchScreen.storyboard */; };
+		862D43021EA9EDEF00A441B0 /* TFNetworkingDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 862D43011EA9EDEF00A441B0 /* TFNetworkingDemoTests.m */; };
+		862D430D1EA9EDEF00A441B0 /* TFNetworkingDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 862D430C1EA9EDEF00A441B0 /* TFNetworkingDemoUITests.m */; };
+		862D431D1EA9EE2700A441B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 862D431C1EA9EE2700A441B0 /* ViewController.m */; };
+		862D43331EA9EE3600A441B0 /* TFNetWorkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 862D43211EA9EE3600A441B0 /* TFNetWorkingManager.m */; };
+		862D43341EA9EE3600A441B0 /* TFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 862D43241EA9EE3600A441B0 /* TFNetworkReachabilityManager.m */; };
+		862D43351EA9EE3600A441B0 /* TFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 862D43271EA9EE3600A441B0 /* TFSecurityPolicy.m */; };
+		862D43361EA9EE3600A441B0 /* TFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 862D432A1EA9EE3600A441B0 /* TFURLRequestSerialization.m */; };
+		862D43371EA9EE3600A441B0 /* TFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 862D432C1EA9EE3600A441B0 /* TFURLResponseSerialization.m */; };
+		862D43381EA9EE3600A441B0 /* TFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 862D432F1EA9EE3600A441B0 /* TFHTTPSessionManager.m */; };
+		862D43391EA9EE3600A441B0 /* TFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 862D43311EA9EE3600A441B0 /* TFURLSessionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		86E553021EA744C00027DADC /* PBXContainerItemProxy */ = {
+		862D42FE1EA9EDEF00A441B0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 86E552E01EA744C00027DADC /* Project object */;
+			containerPortal = 862D42DC1EA9EDEF00A441B0 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 86E552E71EA744C00027DADC;
+			remoteGlobalIDString = 862D42E31EA9EDEF00A441B0;
 			remoteInfo = TFNetworkingDemo;
 		};
-		86E5530D1EA744C00027DADC /* PBXContainerItemProxy */ = {
+		862D43091EA9EDEF00A441B0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 86E552E01EA744C00027DADC /* Project object */;
+			containerPortal = 862D42DC1EA9EDEF00A441B0 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 86E552E71EA744C00027DADC;
+			remoteGlobalIDString = 862D42E31EA9EDEF00A441B0;
 			remoteInfo = TFNetworkingDemo;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C279A44C0766B2C124C0AFD /* libPods-TFNetworkingDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TFNetworkingDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		789D8756F837E3744E5DE25D /* Pods-TFNetworkingDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFNetworkingDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TFNetworkingDemo/Pods-TFNetworkingDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		86E552E81EA744C00027DADC /* TFNetworkingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFNetworkingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		86E552EC1EA744C00027DADC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		86E552EE1EA744C00027DADC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		86E552EF1EA744C00027DADC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		86E552F51EA744C00027DADC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		86E552F71EA744C00027DADC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		86E552FA1EA744C00027DADC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		86E552FC1EA744C00027DADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		86E553011EA744C00027DADC /* TFNetworkingDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFNetworkingDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		86E553051EA744C00027DADC /* TFNetworkingDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFNetworkingDemoTests.m; sourceTree = "<group>"; };
-		86E553071EA744C00027DADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		86E5530C1EA744C00027DADC /* TFNetworkingDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFNetworkingDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		86E553101EA744C00027DADC /* TFNetworkingDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFNetworkingDemoUITests.m; sourceTree = "<group>"; };
-		86E553121EA744C00027DADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		86E5531F1EA744FF0027DADC /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		86E553201EA744FF0027DADC /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		86E5540B1EA746220027DADC /* TFNetWorkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFNetWorkingManager.h; sourceTree = "<group>"; };
-		86E5540C1EA746220027DADC /* TFNetWorkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFNetWorkingManager.m; sourceTree = "<group>"; };
-		86E5540E1EA746220027DADC /* TFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFNetworkReachabilityManager.h; sourceTree = "<group>"; };
-		86E5540F1EA746220027DADC /* TFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFNetworkReachabilityManager.m; sourceTree = "<group>"; };
-		86E554111EA746220027DADC /* TFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFSecurityPolicy.h; sourceTree = "<group>"; };
-		86E554121EA746220027DADC /* TFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFSecurityPolicy.m; sourceTree = "<group>"; };
-		86E554141EA746220027DADC /* TFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFURLRequestSerialization.h; sourceTree = "<group>"; };
-		86E554151EA746220027DADC /* TFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFURLRequestSerialization.m; sourceTree = "<group>"; };
-		86E554161EA746220027DADC /* TFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFURLResponseSerialization.h; sourceTree = "<group>"; };
-		86E554171EA746220027DADC /* TFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFURLResponseSerialization.m; sourceTree = "<group>"; };
-		86E554191EA746220027DADC /* TFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHTTPSessionManager.h; sourceTree = "<group>"; };
-		86E5541A1EA746220027DADC /* TFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHTTPSessionManager.m; sourceTree = "<group>"; };
-		86E5541B1EA746220027DADC /* TFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFURLSessionManager.h; sourceTree = "<group>"; };
-		86E5541C1EA746220027DADC /* TFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFURLSessionManager.m; sourceTree = "<group>"; };
-		86E5541D1EA746220027DADC /* TFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFNetworking.h; sourceTree = "<group>"; };
-		D2D0D573CFFBC78E1B079872 /* Pods-TFNetworkingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFNetworkingDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TFNetworkingDemo/Pods-TFNetworkingDemo.release.xcconfig"; sourceTree = "<group>"; };
+		3CBF2FB72E8DCC091CD7C070 /* Pods-TFNetworkingDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFNetworkingDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TFNetworkingDemo/Pods-TFNetworkingDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		742F6DC090C4FDD12598BD09 /* libPods-TFNetworkingDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TFNetworkingDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		862D42E41EA9EDEF00A441B0 /* TFNetworkingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFNetworkingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		862D42E81EA9EDEF00A441B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		862D42EA1EA9EDEF00A441B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		862D42EB1EA9EDEF00A441B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		862D42F11EA9EDEF00A441B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		862D42F31EA9EDEF00A441B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		862D42F61EA9EDEF00A441B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		862D42F81EA9EDEF00A441B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		862D42FD1EA9EDEF00A441B0 /* TFNetworkingDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFNetworkingDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		862D43011EA9EDEF00A441B0 /* TFNetworkingDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFNetworkingDemoTests.m; sourceTree = "<group>"; };
+		862D43031EA9EDEF00A441B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		862D43081EA9EDEF00A441B0 /* TFNetworkingDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFNetworkingDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		862D430C1EA9EDEF00A441B0 /* TFNetworkingDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFNetworkingDemoUITests.m; sourceTree = "<group>"; };
+		862D430E1EA9EDEF00A441B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		862D431B1EA9EE2700A441B0 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		862D431C1EA9EE2700A441B0 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		862D43201EA9EE3600A441B0 /* TFNetWorkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFNetWorkingManager.h; sourceTree = "<group>"; };
+		862D43211EA9EE3600A441B0 /* TFNetWorkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFNetWorkingManager.m; sourceTree = "<group>"; };
+		862D43231EA9EE3600A441B0 /* TFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		862D43241EA9EE3600A441B0 /* TFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		862D43261EA9EE3600A441B0 /* TFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFSecurityPolicy.h; sourceTree = "<group>"; };
+		862D43271EA9EE3600A441B0 /* TFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFSecurityPolicy.m; sourceTree = "<group>"; };
+		862D43291EA9EE3600A441B0 /* TFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFURLRequestSerialization.h; sourceTree = "<group>"; };
+		862D432A1EA9EE3600A441B0 /* TFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFURLRequestSerialization.m; sourceTree = "<group>"; };
+		862D432B1EA9EE3600A441B0 /* TFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFURLResponseSerialization.h; sourceTree = "<group>"; };
+		862D432C1EA9EE3600A441B0 /* TFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFURLResponseSerialization.m; sourceTree = "<group>"; };
+		862D432E1EA9EE3600A441B0 /* TFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHTTPSessionManager.h; sourceTree = "<group>"; };
+		862D432F1EA9EE3600A441B0 /* TFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHTTPSessionManager.m; sourceTree = "<group>"; };
+		862D43301EA9EE3600A441B0 /* TFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFURLSessionManager.h; sourceTree = "<group>"; };
+		862D43311EA9EE3600A441B0 /* TFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFURLSessionManager.m; sourceTree = "<group>"; };
+		862D43321EA9EE3600A441B0 /* TFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFNetworking.h; sourceTree = "<group>"; };
+		D91D182BBB439BF431A3F9AB /* Pods-TFNetworkingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFNetworkingDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TFNetworkingDemo/Pods-TFNetworkingDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		86E552E51EA744C00027DADC /* Frameworks */ = {
+		862D42E11EA9EDEF00A441B0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEA498A3E549BE6A8D9BDA97 /* libPods-TFNetworkingDemo.a in Frameworks */,
+				40129E5AAC865E980E9C7159 /* libPods-TFNetworkingDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		86E552FE1EA744C00027DADC /* Frameworks */ = {
+		862D42FA1EA9EDEF00A441B0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		86E553091EA744C00027DADC /* Frameworks */ = {
+		862D43051EA9EDEF00A441B0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -105,172 +105,172 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		861DDD7920B88DAC05890907 /* Pods */ = {
+		45D0849380F928C2DE8EE53D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				789D8756F837E3744E5DE25D /* Pods-TFNetworkingDemo.debug.xcconfig */,
-				D2D0D573CFFBC78E1B079872 /* Pods-TFNetworkingDemo.release.xcconfig */,
+				3CBF2FB72E8DCC091CD7C070 /* Pods-TFNetworkingDemo.debug.xcconfig */,
+				D91D182BBB439BF431A3F9AB /* Pods-TFNetworkingDemo.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		86E552DF1EA744C00027DADC = {
+		4F34AD4A2DA97716BF103B3B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				86E552EA1EA744C00027DADC /* TFNetworkingDemo */,
-				86E553041EA744C00027DADC /* TFNetworkingDemoTests */,
-				86E5530F1EA744C00027DADC /* TFNetworkingDemoUITests */,
-				86E552E91EA744C00027DADC /* Products */,
-				861DDD7920B88DAC05890907 /* Pods */,
-				FB4F411B70D2211815F5BC29 /* Frameworks */,
+				742F6DC090C4FDD12598BD09 /* libPods-TFNetworkingDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		862D42DB1EA9EDEF00A441B0 = {
+			isa = PBXGroup;
+			children = (
+				862D42E61EA9EDEF00A441B0 /* TFNetworkingDemo */,
+				862D43001EA9EDEF00A441B0 /* TFNetworkingDemoTests */,
+				862D430B1EA9EDEF00A441B0 /* TFNetworkingDemoUITests */,
+				862D42E51EA9EDEF00A441B0 /* Products */,
+				45D0849380F928C2DE8EE53D /* Pods */,
+				4F34AD4A2DA97716BF103B3B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		86E552E91EA744C00027DADC /* Products */ = {
+		862D42E51EA9EDEF00A441B0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				86E552E81EA744C00027DADC /* TFNetworkingDemo.app */,
-				86E553011EA744C00027DADC /* TFNetworkingDemoTests.xctest */,
-				86E5530C1EA744C00027DADC /* TFNetworkingDemoUITests.xctest */,
+				862D42E41EA9EDEF00A441B0 /* TFNetworkingDemo.app */,
+				862D42FD1EA9EDEF00A441B0 /* TFNetworkingDemoTests.xctest */,
+				862D43081EA9EDEF00A441B0 /* TFNetworkingDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		86E552EA1EA744C00027DADC /* TFNetworkingDemo */ = {
+		862D42E61EA9EDEF00A441B0 /* TFNetworkingDemo */ = {
 			isa = PBXGroup;
 			children = (
-				86E554091EA746220027DADC /* TFNetworking */,
-				86E5531E1EA744FF0027DADC /* Classes */,
-				86E552EF1EA744C00027DADC /* AppDelegate.m */,
-				86E552EE1EA744C00027DADC /* AppDelegate.h */,
-				86E552F41EA744C00027DADC /* Main.storyboard */,
-				86E552F71EA744C00027DADC /* Assets.xcassets */,
-				86E552F91EA744C00027DADC /* LaunchScreen.storyboard */,
-				86E552FC1EA744C00027DADC /* Info.plist */,
-				86E552EB1EA744C00027DADC /* Supporting Files */,
+				862D431E1EA9EE3600A441B0 /* TFNetworking */,
+				862D431A1EA9EE2700A441B0 /* Classes */,
+				862D42EA1EA9EDEF00A441B0 /* AppDelegate.h */,
+				862D42EB1EA9EDEF00A441B0 /* AppDelegate.m */,
+				862D42F01EA9EDEF00A441B0 /* Main.storyboard */,
+				862D42F31EA9EDEF00A441B0 /* Assets.xcassets */,
+				862D42F51EA9EDEF00A441B0 /* LaunchScreen.storyboard */,
+				862D42F81EA9EDEF00A441B0 /* Info.plist */,
+				862D42E71EA9EDEF00A441B0 /* Supporting Files */,
 			);
 			path = TFNetworkingDemo;
 			sourceTree = "<group>";
 		};
-		86E552EB1EA744C00027DADC /* Supporting Files */ = {
+		862D42E71EA9EDEF00A441B0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				86E552EC1EA744C00027DADC /* main.m */,
+				862D42E81EA9EDEF00A441B0 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		86E553041EA744C00027DADC /* TFNetworkingDemoTests */ = {
+		862D43001EA9EDEF00A441B0 /* TFNetworkingDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				86E553051EA744C00027DADC /* TFNetworkingDemoTests.m */,
-				86E553071EA744C00027DADC /* Info.plist */,
+				862D43011EA9EDEF00A441B0 /* TFNetworkingDemoTests.m */,
+				862D43031EA9EDEF00A441B0 /* Info.plist */,
 			);
 			path = TFNetworkingDemoTests;
 			sourceTree = "<group>";
 		};
-		86E5530F1EA744C00027DADC /* TFNetworkingDemoUITests */ = {
+		862D430B1EA9EDEF00A441B0 /* TFNetworkingDemoUITests */ = {
 			isa = PBXGroup;
 			children = (
-				86E553101EA744C00027DADC /* TFNetworkingDemoUITests.m */,
-				86E553121EA744C00027DADC /* Info.plist */,
+				862D430C1EA9EDEF00A441B0 /* TFNetworkingDemoUITests.m */,
+				862D430E1EA9EDEF00A441B0 /* Info.plist */,
 			);
 			path = TFNetworkingDemoUITests;
 			sourceTree = "<group>";
 		};
-		86E5531E1EA744FF0027DADC /* Classes */ = {
+		862D431A1EA9EE2700A441B0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				86E5531F1EA744FF0027DADC /* ViewController.h */,
-				86E553201EA744FF0027DADC /* ViewController.m */,
+				862D431B1EA9EE2700A441B0 /* ViewController.h */,
+				862D431C1EA9EE2700A441B0 /* ViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		86E554091EA746220027DADC /* TFNetworking */ = {
+		862D431E1EA9EE3600A441B0 /* TFNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				86E5541D1EA746220027DADC /* TFNetworking.h */,
-				86E5540A1EA746220027DADC /* Manager */,
-				86E5540D1EA746220027DADC /* Reachability */,
-				86E554101EA746220027DADC /* Security */,
-				86E554131EA746220027DADC /* Serialization */,
-				86E554181EA746220027DADC /* Session */,
+				862D43321EA9EE3600A441B0 /* TFNetworking.h */,
+				862D431F1EA9EE3600A441B0 /* Manager */,
+				862D43221EA9EE3600A441B0 /* Reachability */,
+				862D43251EA9EE3600A441B0 /* Security */,
+				862D43281EA9EE3600A441B0 /* Serialization */,
+				862D432D1EA9EE3600A441B0 /* Session */,
 			);
 			name = TFNetworking;
 			path = ../../TFNetworking;
 			sourceTree = "<group>";
 		};
-		86E5540A1EA746220027DADC /* Manager */ = {
+		862D431F1EA9EE3600A441B0 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				86E5540B1EA746220027DADC /* TFNetWorkingManager.h */,
-				86E5540C1EA746220027DADC /* TFNetWorkingManager.m */,
+				862D43201EA9EE3600A441B0 /* TFNetWorkingManager.h */,
+				862D43211EA9EE3600A441B0 /* TFNetWorkingManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
 		};
-		86E5540D1EA746220027DADC /* Reachability */ = {
+		862D43221EA9EE3600A441B0 /* Reachability */ = {
 			isa = PBXGroup;
 			children = (
-				86E5540E1EA746220027DADC /* TFNetworkReachabilityManager.h */,
-				86E5540F1EA746220027DADC /* TFNetworkReachabilityManager.m */,
+				862D43231EA9EE3600A441B0 /* TFNetworkReachabilityManager.h */,
+				862D43241EA9EE3600A441B0 /* TFNetworkReachabilityManager.m */,
 			);
 			path = Reachability;
 			sourceTree = "<group>";
 		};
-		86E554101EA746220027DADC /* Security */ = {
+		862D43251EA9EE3600A441B0 /* Security */ = {
 			isa = PBXGroup;
 			children = (
-				86E554111EA746220027DADC /* TFSecurityPolicy.h */,
-				86E554121EA746220027DADC /* TFSecurityPolicy.m */,
+				862D43261EA9EE3600A441B0 /* TFSecurityPolicy.h */,
+				862D43271EA9EE3600A441B0 /* TFSecurityPolicy.m */,
 			);
 			path = Security;
 			sourceTree = "<group>";
 		};
-		86E554131EA746220027DADC /* Serialization */ = {
+		862D43281EA9EE3600A441B0 /* Serialization */ = {
 			isa = PBXGroup;
 			children = (
-				86E554141EA746220027DADC /* TFURLRequestSerialization.h */,
-				86E554151EA746220027DADC /* TFURLRequestSerialization.m */,
-				86E554161EA746220027DADC /* TFURLResponseSerialization.h */,
-				86E554171EA746220027DADC /* TFURLResponseSerialization.m */,
+				862D43291EA9EE3600A441B0 /* TFURLRequestSerialization.h */,
+				862D432A1EA9EE3600A441B0 /* TFURLRequestSerialization.m */,
+				862D432B1EA9EE3600A441B0 /* TFURLResponseSerialization.h */,
+				862D432C1EA9EE3600A441B0 /* TFURLResponseSerialization.m */,
 			);
 			path = Serialization;
 			sourceTree = "<group>";
 		};
-		86E554181EA746220027DADC /* Session */ = {
+		862D432D1EA9EE3600A441B0 /* Session */ = {
 			isa = PBXGroup;
 			children = (
-				86E554191EA746220027DADC /* TFHTTPSessionManager.h */,
-				86E5541A1EA746220027DADC /* TFHTTPSessionManager.m */,
-				86E5541B1EA746220027DADC /* TFURLSessionManager.h */,
-				86E5541C1EA746220027DADC /* TFURLSessionManager.m */,
+				862D432E1EA9EE3600A441B0 /* TFHTTPSessionManager.h */,
+				862D432F1EA9EE3600A441B0 /* TFHTTPSessionManager.m */,
+				862D43301EA9EE3600A441B0 /* TFURLSessionManager.h */,
+				862D43311EA9EE3600A441B0 /* TFURLSessionManager.m */,
 			);
 			path = Session;
-			sourceTree = "<group>";
-		};
-		FB4F411B70D2211815F5BC29 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0C279A44C0766B2C124C0AFD /* libPods-TFNetworkingDemo.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		86E552E71EA744C00027DADC /* TFNetworkingDemo */ = {
+		862D42E31EA9EDEF00A441B0 /* TFNetworkingDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 86E553151EA744C00027DADC /* Build configuration list for PBXNativeTarget "TFNetworkingDemo" */;
+			buildConfigurationList = 862D43111EA9EDEF00A441B0 /* Build configuration list for PBXNativeTarget "TFNetworkingDemo" */;
 			buildPhases = (
-				1A710346656C1E93A3FE766D /* [CP] Check Pods Manifest.lock */,
-				86E552E41EA744C00027DADC /* Sources */,
-				86E552E51EA744C00027DADC /* Frameworks */,
-				86E552E61EA744C00027DADC /* Resources */,
-				6603BF7B2005D775815CF494 /* [CP] Embed Pods Frameworks */,
-				7A9F565D4DDE833E25C689E4 /* [CP] Copy Pods Resources */,
+				BD8DFD64C175DC9D1CBD5803 /* [CP] Check Pods Manifest.lock */,
+				862D42E01EA9EDEF00A441B0 /* Sources */,
+				862D42E11EA9EDEF00A441B0 /* Frameworks */,
+				862D42E21EA9EDEF00A441B0 /* Resources */,
+				E521C32060F9EE81C492518C /* [CP] Embed Pods Frameworks */,
+				FB51ED7797C7E6208467B002 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -278,74 +278,74 @@
 			);
 			name = TFNetworkingDemo;
 			productName = TFNetworkingDemo;
-			productReference = 86E552E81EA744C00027DADC /* TFNetworkingDemo.app */;
+			productReference = 862D42E41EA9EDEF00A441B0 /* TFNetworkingDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		86E553001EA744C00027DADC /* TFNetworkingDemoTests */ = {
+		862D42FC1EA9EDEF00A441B0 /* TFNetworkingDemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 86E553181EA744C00027DADC /* Build configuration list for PBXNativeTarget "TFNetworkingDemoTests" */;
+			buildConfigurationList = 862D43141EA9EDEF00A441B0 /* Build configuration list for PBXNativeTarget "TFNetworkingDemoTests" */;
 			buildPhases = (
-				86E552FD1EA744C00027DADC /* Sources */,
-				86E552FE1EA744C00027DADC /* Frameworks */,
-				86E552FF1EA744C00027DADC /* Resources */,
+				862D42F91EA9EDEF00A441B0 /* Sources */,
+				862D42FA1EA9EDEF00A441B0 /* Frameworks */,
+				862D42FB1EA9EDEF00A441B0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				86E553031EA744C00027DADC /* PBXTargetDependency */,
+				862D42FF1EA9EDEF00A441B0 /* PBXTargetDependency */,
 			);
 			name = TFNetworkingDemoTests;
 			productName = TFNetworkingDemoTests;
-			productReference = 86E553011EA744C00027DADC /* TFNetworkingDemoTests.xctest */;
+			productReference = 862D42FD1EA9EDEF00A441B0 /* TFNetworkingDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		86E5530B1EA744C00027DADC /* TFNetworkingDemoUITests */ = {
+		862D43071EA9EDEF00A441B0 /* TFNetworkingDemoUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 86E5531B1EA744C00027DADC /* Build configuration list for PBXNativeTarget "TFNetworkingDemoUITests" */;
+			buildConfigurationList = 862D43171EA9EDEF00A441B0 /* Build configuration list for PBXNativeTarget "TFNetworkingDemoUITests" */;
 			buildPhases = (
-				86E553081EA744C00027DADC /* Sources */,
-				86E553091EA744C00027DADC /* Frameworks */,
-				86E5530A1EA744C00027DADC /* Resources */,
+				862D43041EA9EDEF00A441B0 /* Sources */,
+				862D43051EA9EDEF00A441B0 /* Frameworks */,
+				862D43061EA9EDEF00A441B0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				86E5530E1EA744C00027DADC /* PBXTargetDependency */,
+				862D430A1EA9EDEF00A441B0 /* PBXTargetDependency */,
 			);
 			name = TFNetworkingDemoUITests;
 			productName = TFNetworkingDemoUITests;
-			productReference = 86E5530C1EA744C00027DADC /* TFNetworkingDemoUITests.xctest */;
+			productReference = 862D43081EA9EDEF00A441B0 /* TFNetworkingDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		86E552E01EA744C00027DADC /* Project object */ = {
+		862D42DC1EA9EDEF00A441B0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Donkey-Tao";
 				TargetAttributes = {
-					86E552E71EA744C00027DADC = {
-						CreatedOnToolsVersion = 8.3.1;
+					862D42E31EA9EDEF00A441B0 = {
+						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = W58KGB664J;
 						ProvisioningStyle = Automatic;
 					};
-					86E553001EA744C00027DADC = {
-						CreatedOnToolsVersion = 8.3.1;
+					862D42FC1EA9EDEF00A441B0 = {
+						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = W58KGB664J;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 86E552E71EA744C00027DADC;
+						TestTargetID = 862D42E31EA9EDEF00A441B0;
 					};
-					86E5530B1EA744C00027DADC = {
-						CreatedOnToolsVersion = 8.3.1;
+					862D43071EA9EDEF00A441B0 = {
+						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = W58KGB664J;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 86E552E71EA744C00027DADC;
+						TestTargetID = 862D42E31EA9EDEF00A441B0;
 					};
 				};
 			};
-			buildConfigurationList = 86E552E31EA744C00027DADC /* Build configuration list for PBXProject "TFNetworkingDemo" */;
+			buildConfigurationList = 862D42DF1EA9EDEF00A441B0 /* Build configuration list for PBXProject "TFNetworkingDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -353,37 +353,37 @@
 				en,
 				Base,
 			);
-			mainGroup = 86E552DF1EA744C00027DADC;
-			productRefGroup = 86E552E91EA744C00027DADC /* Products */;
+			mainGroup = 862D42DB1EA9EDEF00A441B0;
+			productRefGroup = 862D42E51EA9EDEF00A441B0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				86E552E71EA744C00027DADC /* TFNetworkingDemo */,
-				86E553001EA744C00027DADC /* TFNetworkingDemoTests */,
-				86E5530B1EA744C00027DADC /* TFNetworkingDemoUITests */,
+				862D42E31EA9EDEF00A441B0 /* TFNetworkingDemo */,
+				862D42FC1EA9EDEF00A441B0 /* TFNetworkingDemoTests */,
+				862D43071EA9EDEF00A441B0 /* TFNetworkingDemoUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		86E552E61EA744C00027DADC /* Resources */ = {
+		862D42E21EA9EDEF00A441B0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86E552FB1EA744C00027DADC /* LaunchScreen.storyboard in Resources */,
-				86E552F81EA744C00027DADC /* Assets.xcassets in Resources */,
-				86E552F61EA744C00027DADC /* Main.storyboard in Resources */,
+				862D42F71EA9EDEF00A441B0 /* LaunchScreen.storyboard in Resources */,
+				862D42F41EA9EDEF00A441B0 /* Assets.xcassets in Resources */,
+				862D42F21EA9EDEF00A441B0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		86E552FF1EA744C00027DADC /* Resources */ = {
+		862D42FB1EA9EDEF00A441B0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		86E5530A1EA744C00027DADC /* Resources */ = {
+		862D43061EA9EDEF00A441B0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -393,7 +393,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1A710346656C1E93A3FE766D /* [CP] Check Pods Manifest.lock */ = {
+		BD8DFD64C175DC9D1CBD5803 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -408,7 +408,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		6603BF7B2005D775815CF494 /* [CP] Embed Pods Frameworks */ = {
+		E521C32060F9EE81C492518C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -423,7 +423,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TFNetworkingDemo/Pods-TFNetworkingDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7A9F565D4DDE833E25C689E4 /* [CP] Copy Pods Resources */ = {
+		FB51ED7797C7E6208467B002 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -441,67 +441,67 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		86E552E41EA744C00027DADC /* Sources */ = {
+		862D42E01EA9EDEF00A441B0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86E554241EA746220027DADC /* TFURLSessionManager.m in Sources */,
-				86E554211EA746220027DADC /* TFURLRequestSerialization.m in Sources */,
-				86E554221EA746220027DADC /* TFURLResponseSerialization.m in Sources */,
-				86E553211EA744FF0027DADC /* ViewController.m in Sources */,
-				86E554231EA746220027DADC /* TFHTTPSessionManager.m in Sources */,
-				86E5541E1EA746220027DADC /* TFNetWorkingManager.m in Sources */,
-				86E552F01EA744C00027DADC /* AppDelegate.m in Sources */,
-				86E552ED1EA744C00027DADC /* main.m in Sources */,
-				86E5541F1EA746220027DADC /* TFNetworkReachabilityManager.m in Sources */,
-				86E554201EA746220027DADC /* TFSecurityPolicy.m in Sources */,
+				862D43391EA9EE3600A441B0 /* TFURLSessionManager.m in Sources */,
+				862D43361EA9EE3600A441B0 /* TFURLRequestSerialization.m in Sources */,
+				862D43371EA9EE3600A441B0 /* TFURLResponseSerialization.m in Sources */,
+				862D431D1EA9EE2700A441B0 /* ViewController.m in Sources */,
+				862D43381EA9EE3600A441B0 /* TFHTTPSessionManager.m in Sources */,
+				862D43331EA9EE3600A441B0 /* TFNetWorkingManager.m in Sources */,
+				862D42EC1EA9EDEF00A441B0 /* AppDelegate.m in Sources */,
+				862D42E91EA9EDEF00A441B0 /* main.m in Sources */,
+				862D43341EA9EE3600A441B0 /* TFNetworkReachabilityManager.m in Sources */,
+				862D43351EA9EE3600A441B0 /* TFSecurityPolicy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		86E552FD1EA744C00027DADC /* Sources */ = {
+		862D42F91EA9EDEF00A441B0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86E553061EA744C00027DADC /* TFNetworkingDemoTests.m in Sources */,
+				862D43021EA9EDEF00A441B0 /* TFNetworkingDemoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		86E553081EA744C00027DADC /* Sources */ = {
+		862D43041EA9EDEF00A441B0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86E553111EA744C00027DADC /* TFNetworkingDemoUITests.m in Sources */,
+				862D430D1EA9EDEF00A441B0 /* TFNetworkingDemoUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		86E553031EA744C00027DADC /* PBXTargetDependency */ = {
+		862D42FF1EA9EDEF00A441B0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 86E552E71EA744C00027DADC /* TFNetworkingDemo */;
-			targetProxy = 86E553021EA744C00027DADC /* PBXContainerItemProxy */;
+			target = 862D42E31EA9EDEF00A441B0 /* TFNetworkingDemo */;
+			targetProxy = 862D42FE1EA9EDEF00A441B0 /* PBXContainerItemProxy */;
 		};
-		86E5530E1EA744C00027DADC /* PBXTargetDependency */ = {
+		862D430A1EA9EDEF00A441B0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 86E552E71EA744C00027DADC /* TFNetworkingDemo */;
-			targetProxy = 86E5530D1EA744C00027DADC /* PBXContainerItemProxy */;
+			target = 862D42E31EA9EDEF00A441B0 /* TFNetworkingDemo */;
+			targetProxy = 862D43091EA9EDEF00A441B0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		86E552F41EA744C00027DADC /* Main.storyboard */ = {
+		862D42F01EA9EDEF00A441B0 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				86E552F51EA744C00027DADC /* Base */,
+				862D42F11EA9EDEF00A441B0 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		86E552F91EA744C00027DADC /* LaunchScreen.storyboard */ = {
+		862D42F51EA9EDEF00A441B0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				86E552FA1EA744C00027DADC /* Base */,
+				862D42F61EA9EDEF00A441B0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -509,7 +509,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		86E553131EA744C00027DADC /* Debug */ = {
+		862D430F1EA9EDEF00A441B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -557,7 +557,7 @@
 			};
 			name = Debug;
 		};
-		86E553141EA744C00027DADC /* Release */ = {
+		862D43101EA9EDEF00A441B0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -599,81 +599,77 @@
 			};
 			name = Release;
 		};
-		86E553161EA744C00027DADC /* Debug */ = {
+		862D43121EA9EDEF00A441B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 789D8756F837E3744E5DE25D /* Pods-TFNetworkingDemo.debug.xcconfig */;
+			baseConfigurationReference = 3CBF2FB72E8DCC091CD7C070 /* Pods-TFNetworkingDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W58KGB664J;
-				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = TFNetworkingDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "http---taofei.me.TFNetworkingDemo";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.dabay.TFNetworkingDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		86E553171EA744C00027DADC /* Release */ = {
+		862D43131EA9EDEF00A441B0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2D0D573CFFBC78E1B079872 /* Pods-TFNetworkingDemo.release.xcconfig */;
+			baseConfigurationReference = D91D182BBB439BF431A3F9AB /* Pods-TFNetworkingDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W58KGB664J;
-				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = TFNetworkingDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "http---taofei.me.TFNetworkingDemo";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.dabay.TFNetworkingDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
-		86E553191EA744C00027DADC /* Debug */ = {
+		862D43151EA9EDEF00A441B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = W58KGB664J;
 				INFOPLIST_FILE = TFNetworkingDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "http---taofei.me.TFNetworkingDemoTests";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.dabay.TFNetworkingDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFNetworkingDemo.app/TFNetworkingDemo";
 			};
 			name = Debug;
 		};
-		86E5531A1EA744C00027DADC /* Release */ = {
+		862D43161EA9EDEF00A441B0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = W58KGB664J;
 				INFOPLIST_FILE = TFNetworkingDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "http---taofei.me.TFNetworkingDemoTests";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.dabay.TFNetworkingDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFNetworkingDemo.app/TFNetworkingDemo";
 			};
 			name = Release;
 		};
-		86E5531C1EA744C00027DADC /* Debug */ = {
+		862D43181EA9EDEF00A441B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = W58KGB664J;
 				INFOPLIST_FILE = TFNetworkingDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "http---taofei.me.TFNetworkingDemoUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.dabay.TFNetworkingDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = TFNetworkingDemo;
 			};
 			name = Debug;
 		};
-		86E5531D1EA744C00027DADC /* Release */ = {
+		862D43191EA9EDEF00A441B0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = W58KGB664J;
 				INFOPLIST_FILE = TFNetworkingDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "http---taofei.me.TFNetworkingDemoUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.dabay.TFNetworkingDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = TFNetworkingDemo;
 			};
@@ -682,43 +678,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		86E552E31EA744C00027DADC /* Build configuration list for PBXProject "TFNetworkingDemo" */ = {
+		862D42DF1EA9EDEF00A441B0 /* Build configuration list for PBXProject "TFNetworkingDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				86E553131EA744C00027DADC /* Debug */,
-				86E553141EA744C00027DADC /* Release */,
+				862D430F1EA9EDEF00A441B0 /* Debug */,
+				862D43101EA9EDEF00A441B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		86E553151EA744C00027DADC /* Build configuration list for PBXNativeTarget "TFNetworkingDemo" */ = {
+		862D43111EA9EDEF00A441B0 /* Build configuration list for PBXNativeTarget "TFNetworkingDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				86E553161EA744C00027DADC /* Debug */,
-				86E553171EA744C00027DADC /* Release */,
+				862D43121EA9EDEF00A441B0 /* Debug */,
+				862D43131EA9EDEF00A441B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		86E553181EA744C00027DADC /* Build configuration list for PBXNativeTarget "TFNetworkingDemoTests" */ = {
+		862D43141EA9EDEF00A441B0 /* Build configuration list for PBXNativeTarget "TFNetworkingDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				86E553191EA744C00027DADC /* Debug */,
-				86E5531A1EA744C00027DADC /* Release */,
+				862D43151EA9EDEF00A441B0 /* Debug */,
+				862D43161EA9EDEF00A441B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		86E5531B1EA744C00027DADC /* Build configuration list for PBXNativeTarget "TFNetworkingDemoUITests" */ = {
+		862D43171EA9EDEF00A441B0 /* Build configuration list for PBXNativeTarget "TFNetworkingDemoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				86E5531C1EA744C00027DADC /* Debug */,
-				86E5531D1EA744C00027DADC /* Release */,
+				862D43181EA9EDEF00A441B0 /* Debug */,
+				862D43191EA9EDEF00A441B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 86E552E01EA744C00027DADC /* Project object */;
+	rootObject = 862D42DC1EA9EDEF00A441B0 /* Project object */;
 }

@@ -2,12 +2,11 @@
 //  AppDelegate.m
 //  TFNetworkingDemo
 //
-//  Created by Dabay on 2017/4/19.
+//  Created by Dabay on 2017/4/21.
 //  Copyright © 2017年 Donkey-Tao. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "TFNetWorkingManager.h"
 
 @interface AppDelegate ()
 
@@ -17,11 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-
-    TFNetWorkingManager *manager=[TFNetWorkingManager sharedManager];
-    
-    
+    // Override point for customization after application launch.
     return YES;
 }
 
