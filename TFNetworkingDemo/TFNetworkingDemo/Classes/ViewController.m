@@ -34,15 +34,13 @@
     NSString *urlString=[NSString stringWithFormat:@"https://app.ywrl.gov.cn:8554/shebao/shebaoQuery.json?"];
     [self.manager tf_RequestURLString:urlString HttpMethod:METHOD_POST Parameters:param succeed:^(id  _Nonnull responseObject) {
         
-        NSLog(@"请求成功-responseObject=%@",responseObject);
+        
         
     } failure:^(NSError * _Nonnull error) {
         
-        NSLog(@"请求失败-error=%@",error);
+        
     }];
     
-    NSLog(@"self.manager-%@",self.manager);
-
 }
 
 
