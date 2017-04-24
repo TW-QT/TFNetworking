@@ -11,6 +11,8 @@
 #import "TFNetworking.h"
 
 
+#define openHttpsSSL YES
+
 NS_ASSUME_NONNULL_BEGIN
 
 
@@ -40,11 +42,22 @@ typedef void (^FailedBlock)(NSError*error);
 ///----------------------------------------------------
 
 /** TFNetWorkingManager是继承自TFHTTPSessionManager的子类，是在TFHTTPSessionManager基础上进行的封装。 */
-@interface TFNetWorkingManager : TFHTTPSessionManager
+@interface TFNetWorkingManager : NSObject
 
 #pragma mark - TFNetworkingManager的属性
+
+
+/** TFHTTPSessionManager是TFNetworkingManager的一个最重要的属性 */
+@property (nonatomic, strong, nullable) TFHTTPSessionManager *httpSessionManager;
+/** 证书名的字符串 */
+@property (nonatomic, strong, nullable) NSString *certificateString;
 /** 整个项目的网络请求的URL的基地址 */
-@property (readonly, nonatomic, copy, nullable) NSString *baseURLString;
+@property (nonatomic, strong, nullable) NSString *baseURLString;
+/* 网络是否可用 */
+@property (nonatomic, assign, nullable) BOOL *hasNet;
+/* 是否已经登录 */
+@property (nonatomic, assign, nullable) BOOL *isLogin;
+
 
 
 #pragma mark - 获取TFNetworking的单例对象
@@ -57,6 +70,17 @@ typedef void (^FailedBlock)(NSError*error);
 
 
 #pragma mark - 网络请求方法
+
+/**
+ TFNetworking 网络请求（HTTPS）
+ 
+ @param URLString 网络请求的URL地址字符串
+ @param method 网络请求的方式：GET/POST
+ @param parameters 网络请求的参数
+ @param successBlock 网络请求成功的回调
+ @param failedBlock 网络请求失败的回调
+ */
+- (void)tf_RequestURLString:(NSString *)URLString HttpMethod:(NSInteger)method  Parameters:(NSDictionary *)parameters  succeed:(SuccessBlock)successBlock failure:(FailedBlock)failedBlock;
 
 /**
  * @brief iOS自带网络请求框架

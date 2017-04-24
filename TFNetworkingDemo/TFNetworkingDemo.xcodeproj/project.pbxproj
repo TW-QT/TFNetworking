@@ -23,6 +23,7 @@
 		862D43371EA9EE3600A441B0 /* TFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 862D432C1EA9EE3600A441B0 /* TFURLResponseSerialization.m */; };
 		862D43381EA9EE3600A441B0 /* TFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 862D432F1EA9EE3600A441B0 /* TFHTTPSessionManager.m */; };
 		862D43391EA9EE3600A441B0 /* TFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 862D43311EA9EE3600A441B0 /* TFURLSessionManager.m */; };
+		866239491EADD91400E76E17 /* *.dabay.cn.cer in Resources */ = {isa = PBXBuildFile; fileRef = 866239481EADD91400E76E17 /* *.dabay.cn.cer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		862D43301EA9EE3600A441B0 /* TFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFURLSessionManager.h; sourceTree = "<group>"; };
 		862D43311EA9EE3600A441B0 /* TFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFURLSessionManager.m; sourceTree = "<group>"; };
 		862D43321EA9EE3600A441B0 /* TFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFNetworking.h; sourceTree = "<group>"; };
+		866239481EADD91400E76E17 /* *.dabay.cn.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "*.dabay.cn.cer"; sourceTree = "<group>"; };
 		D91D182BBB439BF431A3F9AB /* Pods-TFNetworkingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFNetworkingDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TFNetworkingDemo/Pods-TFNetworkingDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +149,7 @@
 		862D42E61EA9EDEF00A441B0 /* TFNetworkingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				866239481EADD91400E76E17 /* *.dabay.cn.cer */,
 				862D431E1EA9EE3600A441B0 /* TFNetworking */,
 				862D431A1EA9EE2700A441B0 /* Classes */,
 				862D42EA1EA9EDEF00A441B0 /* AppDelegate.h */,
@@ -372,6 +375,7 @@
 			files = (
 				862D42F71EA9EDEF00A441B0 /* LaunchScreen.storyboard in Resources */,
 				862D42F41EA9EDEF00A441B0 /* Assets.xcassets in Resources */,
+				866239491EADD91400E76E17 /* *.dabay.cn.cer in Resources */,
 				862D42F21EA9EDEF00A441B0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
