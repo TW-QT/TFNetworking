@@ -24,7 +24,6 @@
     static TFNetWorkingManager * setSharedInstance;
     dispatch_once(&onceToken, ^{//线程锁
         setSharedInstance = [[TFNetWorkingManager alloc] init];
-
     });
     return setSharedInstance;
 }
@@ -33,6 +32,7 @@
 /** 在设置BaseURL时进行创建TFNetworkingManager的TFHTTPSessionManager类型的成员属性 */
 -(void)setBaseURLString:(NSString * _Nullable)baseURLString{
     self.httpSessionManager=[[TFHTTPSessionManager alloc]initWithBaseURL:[NSURL URLWithString:self.baseURLString] sessionConfiguration:nil];
+    _baseURLString=baseURLString;
     NSLog(@"设置BaseURL基地址已经完成，请设置证书名称。");
 }
 
@@ -45,6 +45,7 @@
     self.httpSessionManager.securityPolicy.allowInvalidCertificates=YES;//设置允许使用证书
     self.httpSessionManager.securityPolicy.validatesDomainName=NO;//是否需要验证域名
     self.httpSessionManager.securityPolicy.pinnedCertificates=[NSSet setWithObject:cerData];
+    _certificateString=certificateString;
     NSLog(@"证书名称设置完毕，并设置相关安全策略完成。");
     [self setRequestandResponseSerializer];
 }
@@ -56,13 +57,10 @@
     self.httpSessionManager.requestSerializer.timeoutInterval = 30.0;//默认设置请求的超时时间为30s
     [self.httpSessionManager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
   
-    
     //初始化网络请求返回的设置
     self.httpSessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
     self.httpSessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
     self.httpSessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain", nil];
-    
-    NSLog(@"设置请求和返回的数据时=%@",self.certificateString);
 }
 
 
