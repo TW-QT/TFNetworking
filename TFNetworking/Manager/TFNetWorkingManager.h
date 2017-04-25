@@ -22,13 +22,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * @brief 定义枚举类型的网络请求类型：GET OR POST
- * METHOD_GET: 网络请求方式为GET
- * METHOD_POST: 网络请求方式为POST
+ * TF_HTTPSMETHOD_GET: 网络请求方式为GET
+ * TF_HTTPSMETHOD_POST: 网络请求方式为POST
  */
-typedef NS_ENUM(NSInteger,HTTPMETHOD)
+typedef NS_ENUM(NSInteger,TF_HTTPSMETHOD)
 {
-    METHOD_GET   = 0,
-    METHOD_POST  = 1,
+    TF_HTTPSMETHOD_GET   = 0,
+    TF_HTTPSMETHOD_POST  = 1,
 };
 /** 网络请求成功的回调 */
 typedef void (^SuccessBlock)(id responseObject);
@@ -48,7 +48,7 @@ typedef void (^FailedBlock)(NSError*error);
 
 
 /** TFHTTPSessionManager是TFNetworkingManager的一个最重要的属性 */
-@property (nonatomic, strong, nullable) TFHTTPSessionManager *httpSessionManager;
+@property (nonatomic, strong, nullable) TFHTTPSessionManager *tf_HttpsSessionManager;
 /** 证书名的字符串 */
 @property (nonatomic, strong, nullable) NSString *certificateString;
 /** 整个项目的网络请求的URL的基地址 */
@@ -71,16 +71,18 @@ typedef void (^FailedBlock)(NSError*error);
 
 #pragma mark - 网络请求方法
 
-/**
- TFNetworking 网络请求（HTTPS）
- 
- @param URLString 网络请求的URL地址字符串
- @param method 网络请求的方式：GET/POST
- @param parameters 网络请求的参数
- @param successBlock 网络请求成功的回调
- @param failedBlock 网络请求失败的回调
- */
+///**
+// TFNetworking 网络请求（HTTPS）
+// 
+// @param URLString 网络请求的URL地址字符串
+// @param method 网络请求的方式：GET/POST
+// @param parameters 网络请求的参数
+// @param successBlock 网络请求成功的回调
+// @param failedBlock 网络请求失败的回调
+// */
 - (void)tf_RequestURLString:(NSString *)URLString HttpMethod:(NSInteger)method  Parameters:(NSDictionary *)parameters  succeed:(SuccessBlock)successBlock failure:(FailedBlock)failedBlock;
+
+
 
 /**
  * @brief iOS自带网络请求框架

@@ -31,36 +31,36 @@
 #pragma mark -TFNetworkingManager类的单例对象的初始化
 /** 在设置BaseURL时进行创建TFNetworkingManager的TFHTTPSessionManager类型的成员属性 */
 -(void)setBaseURLString:(NSString * _Nullable)baseURLString{
-    self.httpSessionManager=[[TFHTTPSessionManager alloc]initWithBaseURL:[NSURL URLWithString:self.baseURLString] sessionConfiguration:nil];
     _baseURLString=baseURLString;
+    self.tf_HttpsSessionManager=[[TFHTTPSessionManager alloc]initWithBaseURL:[NSURL URLWithString:_baseURLString]];
     NSLog(@"设置BaseURL基地址已经完成，请设置证书名称。");
 }
 
 /** 设置证书名字符串 */
 -(void)setCertificateString:(NSString * _Nullable)certificateString{
-    //设置安全策略
-    NSString *cerPath = [[NSBundle mainBundle] pathForResource:certificateString ofType:@"cer"];
-    NSData *cerData = [NSData dataWithContentsOfFile:cerPath];
-    self.httpSessionManager.securityPolicy=[AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
-    self.httpSessionManager.securityPolicy.allowInvalidCertificates=YES;//设置允许使用证书
-    self.httpSessionManager.securityPolicy.validatesDomainName=NO;//是否需要验证域名
-    self.httpSessionManager.securityPolicy.pinnedCertificates=[NSSet setWithObject:cerData];
     _certificateString=certificateString;
+    //设置安全策略
+    NSString *cerPath = [[NSBundle mainBundle] pathForResource:_certificateString ofType:@"cer"];
+    NSData *cerData = [NSData dataWithContentsOfFile:cerPath];
+    self.tf_HttpsSessionManager.securityPolicy=[AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
+    self.tf_HttpsSessionManager.securityPolicy.allowInvalidCertificates=YES;//设置允许使用证书
+    self.tf_HttpsSessionManager.securityPolicy.validatesDomainName=NO;//是否需要验证域名
+    self.tf_HttpsSessionManager.securityPolicy.pinnedCertificates=[NSSet setWithObject:cerData];
     NSLog(@"证书名称设置完毕，并设置相关安全策略完成。");
+    
     [self setRequestandResponseSerializer];
 }
 
 /** 设置请求和相应的Serializer */
 -(void)setRequestandResponseSerializer{
     //初始化网络请求的设置
-    [self.httpSessionManager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
-    self.httpSessionManager.requestSerializer.timeoutInterval = 30.0;//默认设置请求的超时时间为30s
-    [self.httpSessionManager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+    self.tf_HttpsSessionManager.requestSerializer.timeoutInterval = 30.0;//默认设置请求的超时时间为30s
+    self.tf_HttpsSessionManager.responseSerializer.stringEncoding=NSUTF8StringEncoding;
   
     //初始化网络请求返回的设置
-    self.httpSessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    self.httpSessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
-    self.httpSessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain", nil];
+    self.tf_HttpsSessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    self.tf_HttpsSessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
+    self.tf_HttpsSessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain", nil];
 }
 
 
@@ -78,10 +78,10 @@
 - (void)tf_RequestURLString:(NSString *)URLString HttpMethod:(NSInteger)method  Parameters:(NSDictionary *)parameters  succeed:(SuccessBlock)successBlock failure:(FailedBlock)failedBlock{
     
     // 1.获取TFHTTPSessionManager类型的属性对象
-    TFHTTPSessionManager *manager = [TFNetWorkingManager sharedManager].httpSessionManager;
+    TFHTTPSessionManager *manager = [TFNetWorkingManager sharedManager].tf_HttpsSessionManager;
     
     // 2.设置URLString不同类型时的安全策略
-    URLString == nil || [URLString isEqualToString:@""] ? (void)(manager.securityPolicy.allowInvalidCertificates = NO,manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone]):(manager.securityPolicy.allowInvalidCertificates = YES,manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate]);
+//    URLString == nil || [URLString isEqualToString:@""] ? (void)(manager.securityPolicy.allowInvalidCertificates = NO,manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone]):(manager.securityPolicy.allowInvalidCertificates = YES,manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate]);
     
     //3.如果URLString里面是有效的URL地址
     if (URLString != nil){
@@ -142,7 +142,7 @@
         return;
     }
     
-    if (method == METHOD_GET){//发送GET请求
+    if (method == TF_HTTPSMETHOD_GET){//发送GET请求
         [manager GET:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             if (successBlock){
@@ -154,7 +154,7 @@
             failedBlock(error);
             NSLog(@"TFNetworking-请求-GET-请求失败-error=%@",error);
         }];
-    }else if (method == METHOD_POST){//发送POST请求
+    }else if (method == TF_HTTPSMETHOD_POST){//发送POST请求
         [manager POST:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             if (successBlock){
@@ -168,6 +168,8 @@
         }];
     }
 }
+
+
 
 
 #pragma mark - 网络请求方法
@@ -228,14 +230,14 @@
      GET ： 参数拼接在URL后面
      POST ： 参数添加到请求体中
      */
-    if (method == METHOD_GET) {
+    if (method == TF_HTTPSMETHOD_GET) {
         
         NSString *separe = url.query?@"&":@"?";
         NSString *paramsURL = [NSString stringWithFormat:@"%@%@%@",urlstring,separe,paramsString];
         
         request.URL = [NSURL URLWithString:paramsURL];
     }
-    else if(method == METHOD_POST) {
+    else if(method == TF_HTTPSMETHOD_POST) {
         
         NSData *bodyData = [paramsString dataUsingEncoding:NSUTF8StringEncoding];
         [request setHTTPBody:bodyData];
@@ -300,7 +302,7 @@
     
     // 5.选择请求方式 GET 或 POST
     switch (method) {
-        case METHOD_GET:
+        case TF_HTTPSMETHOD_GET:
         {
             [manager GET:URLString parameters:nil progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
                 NSString *responseStr =  [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
@@ -310,7 +312,7 @@
             }];
         }
             break;
-        case METHOD_POST:
+        case TF_HTTPSMETHOD_POST:
         {
             [manager POST:URLString parameters:parameters progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
                 NSString *responseStr =  [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
@@ -421,7 +423,7 @@
         }];
     }
     
-    if (method == METHOD_GET){//发送GET请求
+    if (method == TF_HTTPSMETHOD_GET){//发送GET请求
         [manager GET:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             if (successBlock){
@@ -432,7 +434,7 @@
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             failedBlock(error);
         }];
-    }else if (method == METHOD_POST){//发送POST请求
+    }else if (method == TF_HTTPSMETHOD_POST){//发送POST请求
         [manager POST:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             if (successBlock){
