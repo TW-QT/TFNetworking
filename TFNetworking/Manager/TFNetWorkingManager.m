@@ -29,41 +29,32 @@
 }
 
 #pragma mark -TFNetworkingManager类的单例对象的初始化
-/** 在设置BaseURL时进行创建TFNetworkingManager的TFHTTPSessionManager类型的成员属性 */
--(void)setBaseURLString:(NSString * _Nullable)baseURLString{
-    _baseURLString=baseURLString;
-    self.tf_HttpsSessionManager=[[TFHTTPSessionManager alloc]initWithBaseURL:[NSURL URLWithString:_baseURLString]];
-    NSLog(@"设置BaseURL基地址已经完成，请设置证书名称。");
-}
-
-/** 设置证书名字符串 */
--(void)setCertificateString:(NSString * _Nullable)certificateString{
-    _certificateString=certificateString;
-    //设置安全策略
-    NSString *cerPath = [[NSBundle mainBundle] pathForResource:_certificateString ofType:@"cer"];
-    NSData *cerData = [NSData dataWithContentsOfFile:cerPath];
-    self.tf_HttpsSessionManager.securityPolicy=[AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
-    self.tf_HttpsSessionManager.securityPolicy.allowInvalidCertificates=YES;//设置允许使用证书
-    self.tf_HttpsSessionManager.securityPolicy.validatesDomainName=NO;//是否需要验证域名
-    self.tf_HttpsSessionManager.securityPolicy.pinnedCertificates=[NSSet setWithObject:cerData];
-    NSLog(@"证书名称设置完毕，并设置相关安全策略完成。");
-    
-    [self setRequestandResponseSerializer];
-}
 
 /** 设置请求和相应的Serializer */
--(void)setRequestandResponseSerializer{
+-(void)setRequestandResponseSerializerWith:(TFHTTPSessionManager *)tf_HttpsSessionManager{
     //初始化网络请求的设置
-    self.tf_HttpsSessionManager.requestSerializer.timeoutInterval = 30.0;//默认设置请求的超时时间为30s
-    self.tf_HttpsSessionManager.responseSerializer.stringEncoding=NSUTF8StringEncoding;
+    tf_HttpsSessionManager.requestSerializer.timeoutInterval = 30.0;//默认设置请求的超时时间为30s
+    tf_HttpsSessionManager.responseSerializer.stringEncoding=NSUTF8StringEncoding;
   
     //初始化网络请求返回的设置
-    self.tf_HttpsSessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    self.tf_HttpsSessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
-    self.tf_HttpsSessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain", nil];
+    tf_HttpsSessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    tf_HttpsSessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
+    tf_HttpsSessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain", nil];
 }
 
 
+/** 设置并初始化tf_HttpsSessionManager */
+-(void)setupTFHttpsSessionManagerWith:(TFHTTPSessionManager *)tf_HttpsSessionManager{
+    //设置安全策略
+    NSString *cerPath = [[NSBundle mainBundle] pathForResource:self.certificateString ofType:@"cer"];
+    NSData *cerData = [NSData dataWithContentsOfFile:cerPath];
+    tf_HttpsSessionManager.securityPolicy=[AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
+    tf_HttpsSessionManager.securityPolicy.allowInvalidCertificates=YES;//设置允许使用证书
+    tf_HttpsSessionManager.securityPolicy.validatesDomainName=NO;//是否需要验证域名
+    tf_HttpsSessionManager.securityPolicy.pinnedCertificates=[NSSet setWithObject:cerData];
+    NSLog(@"证书名称设置完毕，并设置相关安全策略完成。");
+    
+}
 
 
 /**
@@ -79,9 +70,6 @@
     
     // 1.获取TFHTTPSessionManager类型的属性对象
     TFHTTPSessionManager *manager = [TFNetWorkingManager sharedManager].tf_HttpsSessionManager;
-    
-    // 2.设置URLString不同类型时的安全策略
-//    URLString == nil || [URLString isEqualToString:@""] ? (void)(manager.securityPolicy.allowInvalidCertificates = NO,manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone]):(manager.securityPolicy.allowInvalidCertificates = YES,manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate]);
     
     //3.如果URLString里面是有效的URL地址
     if (URLString != nil){
@@ -190,7 +178,7 @@
        complection:(SuccessBlock)SuccessBlock failed:(FailedBlock)failedBlock{
     
     //1.构造URL
-    urlstring = [[TFNetWorkingManager sharedManager].baseURLString stringByAppendingString:urlstring];
+    urlstring = [[TFNetWorkingManager sharedManager].tf_BaseURLString stringByAppendingString:urlstring];
     NSURL *url = [NSURL URLWithString:urlstring];
 
     
@@ -285,7 +273,7 @@
             failure:(FailedBlock)failedBlock
 {
     // 0.设置API地址
-    URLString = [NSString stringWithFormat:@"%@%@",[TFNetWorkingManager sharedManager].baseURLString,[URLString stringByReplacingOccurrencesOfString:@" " withString:@"%20"]];
+    URLString = [NSString stringWithFormat:@"%@%@",[TFNetWorkingManager sharedManager].tf_BaseURLString,[URLString stringByReplacingOccurrencesOfString:@" " withString:@"%20"]];
     NSLog(@"\n AF网络请求参数列表:%@\n\n 接口名: %@\n\n",parameters,URLString);
     
     // 1.创建请求管理者
@@ -469,7 +457,7 @@
             failure:(FailedBlock)failedBlock
 {
     // 0.设置API地址
-    URLString = [NSString stringWithFormat:@"%@%@",[TFNetWorkingManager sharedManager].baseURLString,[URLString stringByReplacingOccurrencesOfString:@" " withString:@"%20"]];
+    URLString = [NSString stringWithFormat:@"%@%@",[TFNetWorkingManager sharedManager].tf_BaseURLString,[URLString stringByReplacingOccurrencesOfString:@" " withString:@"%20"]];
     NSLog(@"\n POST上传单张图片参数列表:%@\n\n%@\n",parameters,[TFNetWorkingManager URLEncryOrDecryString:parameters IsHead:false]);
     
     // 1.创建请求管理者
@@ -529,7 +517,7 @@
             failure:(FailedBlock)failedBlock
 {
     // 0.设置API地址
-    URLString = [NSString stringWithFormat:@"%@%@",[TFNetWorkingManager sharedManager].baseURLString,[URLString stringByReplacingOccurrencesOfString:@" " withString:@"%20"]];
+    URLString = [NSString stringWithFormat:@"%@%@",[TFNetWorkingManager sharedManager].tf_BaseURLString,[URLString stringByReplacingOccurrencesOfString:@" " withString:@"%20"]];
     NSLog(@"\n POST上传多张图片参数列表:%@\n\n%@\n",parameters,[TFNetWorkingManager URLEncryOrDecryString:parameters IsHead:false]);
     
     // 1.创建请求管理者
@@ -595,7 +583,7 @@
             failure:(FailedBlock)failedBlock
 {
     // 0.设置API地址
-    URLString = [NSString stringWithFormat:@"%@%@",[TFNetWorkingManager sharedManager].baseURLString,[URLString stringByReplacingOccurrencesOfString:@" " withString:@"%20"]];
+    URLString = [NSString stringWithFormat:@"%@%@",[TFNetWorkingManager sharedManager].tf_BaseURLString,[URLString stringByReplacingOccurrencesOfString:@" " withString:@"%20"]];
     
     // NSLog(@"\n POST上传文件参数列表:%@\n\n%@\n",parameters,[Utilit URLEncryOrDecryString:parameters IsHead:false]);
     

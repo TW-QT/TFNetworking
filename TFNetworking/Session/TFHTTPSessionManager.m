@@ -26,21 +26,159 @@
 #import <WatchKit/WatchKit.h>
 #endif
 
-@interface TFHTTPSessionManager ()
 
-
-
-@end
+static TFHTTPSessionManager * httpsManager = nil;
 
 @implementation TFHTTPSessionManager
 
 
 
++(instancetype)httpsSessionManager{
+
+    //1.创建TFHTTPSessionManager类型的对象
+    NSString *baseURLString=[TFNetWorkingManager sharedManager].tf_BaseURLString;
+    NSURL *baseURL=[NSURL URLWithString:baseURLString];
+    NSLog(@"创建TFHTTPSessionManager类型的对象--baseURLString=%@",baseURLString);
+    TFHTTPSessionManager *tf_HttpsSessionManager=[[TFHTTPSessionManager alloc]initWithBaseURL:baseURL];
+    //2.设置tf_HttpsSessionManager的安全策略
+    [self setupSecurityPolicyForTFHttpsSessionManager:tf_HttpsSessionManager];
+    //3.设置tf_HttpsSessionManager的请求和返回
+    [self setupRequestAndResponseSerializerForTFHttpsSessionManager:tf_HttpsSessionManager];
+    return tf_HttpsSessionManager;
+}
+
+/** 设置tf_HttpsSessionManager的安全策略 */
++(void)setupSecurityPolicyForTFHttpsSessionManager:(TFHTTPSessionManager *)tf_HttpsSessionManager{
+    
+    NSString * certificateString=[TFNetWorkingManager sharedManager].certificateString;
+    NSLog(@"设置tf_HttpsSessionManager的安全策略--certificateString=%@",certificateString);
+    //设置安全策略
+    NSString *cerPath = [[NSBundle mainBundle] pathForResource:certificateString ofType:@"cer"];
+    NSData *cerData = [NSData dataWithContentsOfFile:cerPath];
+    tf_HttpsSessionManager.securityPolicy=[AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
+    tf_HttpsSessionManager.securityPolicy.allowInvalidCertificates=YES;//设置允许使用证书
+    tf_HttpsSessionManager.securityPolicy.validatesDomainName=NO;//是否需要验证域名
+    tf_HttpsSessionManager.securityPolicy.pinnedCertificates=[NSSet setWithObject:cerData];
+    NSLog(@"证书名称设置完毕，并设置相关安全策略完成。");
+    
+}
+
+/** 设置tf_HttpsSessionManager请求和返回的Serializer */
++(void)setupRequestAndResponseSerializerForTFHttpsSessionManager:(TFHTTPSessionManager *)tf_HttpsSessionManager{
+    //初始化网络请求的设置
+    tf_HttpsSessionManager.requestSerializer.timeoutInterval = 30.0;//默认设置请求的超时时间为30s
+    tf_HttpsSessionManager.responseSerializer.stringEncoding=NSUTF8StringEncoding;
+    
+    //初始化网络请求返回的设置
+    tf_HttpsSessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    tf_HttpsSessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
+    tf_HttpsSessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain", nil];
+}
 
 
-
-
-
+/**
+ TFNetworking 网络请求（HTTPS）
+ 
+ @param URLString 网络请求的URL地址字符串
+ @param method 网络请求的方式：GET/POST
+ @param parameters 网络请求的参数
+ @param successBlock 网络请求成功的回调
+ @param failedBlock 网络请求失败的回调
+ */
++(void)tf_RequestURLString:(NSString *)URLString HttpMethod:(NSInteger)method  Parameters:(NSDictionary *)parameters  succeed:(SuccessBlock)successBlock failure:(FailedBlock)failedBlock{
+    
+    
+    TFHTTPSessionManager *manager=[TFHTTPSessionManager httpsSessionManager];
+    httpsManager=manager;
+    //证书的名称
+    NSString * certificateString=[TFNetWorkingManager sharedManager].certificateString;
+    //3.如果URLString里面是有效的URL地址
+    if (URLString != nil){
+        typeof (manager) weakManager = manager ;
+        [manager setSessionDidReceiveAuthenticationChallengeBlock:^NSURLSessionAuthChallengeDisposition(NSURLSession *session, NSURLAuthenticationChallenge *challenge, NSURLCredential *__autoreleasing *_credential) {
+            
+            
+            
+            //3.1获取服务器的 trust object
+            SecTrustRef serverTrust = [[challenge protectionSpace] serverTrust];
+            
+            //3.2导入自签名证书
+            NSString *cerPath = [[NSBundle mainBundle] pathForResource:certificateString ofType:@"cer"];
+            NSData *cerData = [NSData dataWithContentsOfFile:cerPath];
+            
+            if (!cerData) {
+                NSLog(@"TFNetWorking处理时证书文件未获取到，.cer文件为空");
+                return 0;
+            }
+            
+            weakManager.securityPolicy.pinnedCertificates = [NSSet setWithArray:@[cerData]];
+            SecCertificateRef caRef = SecCertificateCreateWithData(NULL, (__bridge CFDataRef)cerData);
+            NSCAssert(caRef != nil, @"caRef is nil");
+            
+            NSArray *caArray = @[(__bridge id)(caRef)];
+            NSCAssert(caArray != nil, @"caArray is nil");
+            
+            //3.3将读取到的证书设置为serverTrust的根证书
+            OSStatus status = SecTrustSetAnchorCertificates(serverTrust, (__bridge CFArrayRef)caArray);
+            SecTrustSetAnchorCertificatesOnly(serverTrust, NO);
+            NSCAssert(errSecSuccess == status, @"SectrustSetAnchorCertificates failed");
+            NSLog(@"status=%d",(int)status);
+            
+            //3.4选择质询认证的处理方式
+            NSURLSessionAuthChallengeDisposition disposition = NSURLSessionAuthChallengePerformDefaultHandling;
+            __autoreleasing NSURLCredential *credential = nil;
+            
+            //3.5NSURLAuthenTicationMethodServerTrust质询认证方式
+            if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust]) {
+                //基于客户端的安全策略来决定是否信任该服务器，不信任则不响应质询
+                if ([weakManager.securityPolicy evaluateServerTrust:challenge.protectionSpace.serverTrust forDomain:challenge.protectionSpace.host]) {
+                    
+                    //创建质询证书
+                    credential = [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust];
+                    if (credential) {//确认质询方式
+                        disposition = NSURLSessionAuthChallengeUseCredential;
+                    } else {
+                        disposition = NSURLSessionAuthChallengePerformDefaultHandling;
+                    }
+                } else {//取消挑战
+                    disposition = NSURLSessionAuthChallengeCancelAuthenticationChallenge;
+                }
+            } else {
+                disposition = NSURLSessionAuthChallengePerformDefaultHandling;
+            }
+            return disposition;
+        }];
+    }else{
+        NSLog(@"URLString为nil，被TFNetWorking拦截，网络请求未发送");
+        return;
+    }
+    
+    if (method == TF_HTTPSMETHOD_GET){//发送GET请求
+        [manager GET:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            if (successBlock){
+                successBlock(responseObject);
+            }else{
+                NSLog(@"TFNetWorking发送GET请求时失败，链接异常或网络不存在");
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            failedBlock(error);
+            NSLog(@"TFNetworking-请求-GET-请求失败-error=%@",error);
+        }];
+    }else if (method == TF_HTTPSMETHOD_POST){//发送POST请求
+        [manager POST:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            if (successBlock){
+                successBlock(responseObject);
+            }else{
+                NSLog(@"TFNetWorking发送POST请求时失败，链接异常或网络不存在");
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            failedBlock(error);
+            NSLog(@"TFNetworking-请求-POST-请求失败-error=%@",error);
+        }];
+    }
+}
 
 
 

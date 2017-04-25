@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		40129E5AAC865E980E9C7159 /* libPods-TFNetworkingDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 742F6DC090C4FDD12598BD09 /* libPods-TFNetworkingDemo.a */; };
+		862699B21EAF4EC0009E81A8 /* *.dabay.cn.cer in Resources */ = {isa = PBXBuildFile; fileRef = 862699B11EAF4EC0009E81A8 /* *.dabay.cn.cer */; };
 		862D42E91EA9EDEF00A441B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 862D42E81EA9EDEF00A441B0 /* main.m */; };
 		862D42EC1EA9EDEF00A441B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 862D42EB1EA9EDEF00A441B0 /* AppDelegate.m */; };
 		862D42F21EA9EDEF00A441B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 862D42F01EA9EDEF00A441B0 /* Main.storyboard */; };
@@ -23,7 +24,6 @@
 		862D43371EA9EE3600A441B0 /* TFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 862D432C1EA9EE3600A441B0 /* TFURLResponseSerialization.m */; };
 		862D43381EA9EE3600A441B0 /* TFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 862D432F1EA9EE3600A441B0 /* TFHTTPSessionManager.m */; };
 		862D43391EA9EE3600A441B0 /* TFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 862D43311EA9EE3600A441B0 /* TFURLSessionManager.m */; };
-		866239491EADD91400E76E17 /* *.dabay.cn.cer in Resources */ = {isa = PBXBuildFile; fileRef = 866239481EADD91400E76E17 /* *.dabay.cn.cer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +46,7 @@
 /* Begin PBXFileReference section */
 		3CBF2FB72E8DCC091CD7C070 /* Pods-TFNetworkingDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFNetworkingDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TFNetworkingDemo/Pods-TFNetworkingDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		742F6DC090C4FDD12598BD09 /* libPods-TFNetworkingDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TFNetworkingDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		862699B11EAF4EC0009E81A8 /* *.dabay.cn.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "*.dabay.cn.cer"; sourceTree = "<group>"; };
 		862D42E41EA9EDEF00A441B0 /* TFNetworkingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFNetworkingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		862D42E81EA9EDEF00A441B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		862D42EA1EA9EDEF00A441B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -77,7 +78,6 @@
 		862D43301EA9EE3600A441B0 /* TFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFURLSessionManager.h; sourceTree = "<group>"; };
 		862D43311EA9EE3600A441B0 /* TFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFURLSessionManager.m; sourceTree = "<group>"; };
 		862D43321EA9EE3600A441B0 /* TFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFNetworking.h; sourceTree = "<group>"; };
-		866239481EADD91400E76E17 /* *.dabay.cn.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "*.dabay.cn.cer"; sourceTree = "<group>"; };
 		D91D182BBB439BF431A3F9AB /* Pods-TFNetworkingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFNetworkingDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TFNetworkingDemo/Pods-TFNetworkingDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,7 +149,7 @@
 		862D42E61EA9EDEF00A441B0 /* TFNetworkingDemo */ = {
 			isa = PBXGroup;
 			children = (
-				866239481EADD91400E76E17 /* *.dabay.cn.cer */,
+				862699B11EAF4EC0009E81A8 /* *.dabay.cn.cer */,
 				862D431E1EA9EE3600A441B0 /* TFNetworking */,
 				862D431A1EA9EE2700A441B0 /* Classes */,
 				862D42EA1EA9EDEF00A441B0 /* AppDelegate.h */,
@@ -375,7 +375,7 @@
 			files = (
 				862D42F71EA9EDEF00A441B0 /* LaunchScreen.storyboard in Resources */,
 				862D42F41EA9EDEF00A441B0 /* Assets.xcassets in Resources */,
-				866239491EADD91400E76E17 /* *.dabay.cn.cer in Resources */,
+				862699B21EAF4EC0009E81A8 /* *.dabay.cn.cer in Resources */,
 				862D42F21EA9EDEF00A441B0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -610,6 +610,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W58KGB664J;
 				INFOPLIST_FILE = TFNetworkingDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.dabay.TFNetworkingDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -623,6 +624,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W58KGB664J;
 				INFOPLIST_FILE = TFNetworkingDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.dabay.TFNetworkingDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

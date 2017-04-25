@@ -48,11 +48,11 @@ typedef void (^FailedBlock)(NSError*error);
 
 
 /** TFHTTPSessionManager是TFNetworkingManager的一个最重要的属性 */
-@property (nonatomic, strong, nullable) TFHTTPSessionManager *tf_HttpsSessionManager;
+@property (nonatomic, strong, nullable) AFHTTPSessionManager *tf_HttpsSessionManager;
 /** 证书名的字符串 */
 @property (nonatomic, strong, nullable) NSString *certificateString;
 /** 整个项目的网络请求的URL的基地址 */
-@property (nonatomic, strong, nullable) NSString *baseURLString;
+@property (nonatomic, strong, nullable) NSString *tf_BaseURLString;
 /* 网络是否可用 */
 @property (nonatomic, assign, nullable) BOOL *hasNet;
 /* 是否已经登录 */
