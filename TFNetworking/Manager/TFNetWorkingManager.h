@@ -41,10 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) NSString *certificateString;
 /** 整个项目的网络请求的URL的基地址 */
 @property (nonatomic, strong, nullable) NSString *tf_BaseURLString;
-/* 网络是否可用 */
-@property (nonatomic, assign, nullable) BOOL *hasNet;
-/* 是否已经登录 */
-@property (nonatomic, assign, nullable) BOOL *isLogin;
+
 
 
 
