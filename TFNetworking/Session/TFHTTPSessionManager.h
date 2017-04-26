@@ -26,11 +26,27 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
+/**
+ * @brief 定义枚举类型的网络请求类型：GET OR POST
+ * TF_HTTPSMETHOD_GET: 网络请求方式为GET
+ * TF_HTTPSMETHOD_POST: 网络请求方式为POST
+ */
+typedef NS_ENUM(NSInteger,TF_HTTPSMETHOD)
+{
+    TF_HTTPSMETHOD_GET   = 0,
+    TF_HTTPSMETHOD_POST  = 1,
+};
 
-/** 网络请求成功的回调 */
-typedef void (^SuccessBlock)(id responseObject);
+
+
+/**
+ 网络请求成功的回调
+
+ @param responseDictionary 返回从服务器返回的数据的NSDictionary类型
+ */
+typedef void (^SuccessBlock)(NSDictionary * responseDictionary);
 /** 网络请求失败的回调 */
-typedef void (^FailedBlock)(NSError*error);
+typedef void (^FailedBlock)(NSError *error);
 
 
 @interface TFHTTPSessionManager : AFHTTPSessionManager
@@ -60,71 +76,7 @@ typedef void (^FailedBlock)(NSError*error);
  */
 + (void)tf_RequestURLString:(NSString *)URLString HttpMethod:(NSInteger)method  Parameters:(NSDictionary *)parameters  succeed:(SuccessBlock)successBlock failure:(FailedBlock)failedBlock;
 
-/**
- * @brief iOS自带网络请求框架
- * @param urlstring URL地址的字符串
- * @param method URL地址的字符串
- * @param params 请求中使用的参数
- * @param SuccessBlock 请求成功的回调
- * @param failedBlock 请求失败的回调
- */
-+ (void)requestURL:(NSString *)urlstring httpMethod:(NSInteger)method params:(NSMutableDictionary *)params complection:(SuccessBlock)SuccessBlock failed:(FailedBlock)failedBlock;
 
-/**
- * @brief AFNetworking数据请求(HTTP)
- * @param URLString URL地址的字符串
- * @param method URL地址的字符串
- * @param parameters 请求中使用的参数
- * @param successBlock 请求成功的回调
- * @param failedBlock 请求失败的回调
- */
-+(void)requestAFURL:(NSString *)URLString httpMethod:(NSInteger)method parameters:(id)parameters succeed:(SuccessBlock)successBlock failure:(FailedBlock)failedBlock;
-
-/**
- * @brief AFNetworking网络请求(HTTPS)
- * @param URLString URL地址的字符串
- * @param method URL地址的字符串
- * @param parameters 请求中使用的参数
- * @param successBlock 请求成功的回调
- * @param failedBlock 请求失败的回调
- */
-+ (void)requestAFURL:(NSString *)URLString httpMethod:(NSInteger)method Signature:(NSString *)signature Parameters:(NSDictionary *)parameters RequestTimes:(float)requestTimes succeed:(SuccessBlock)successBlock failure:(FailedBlock)failedBlock;
-
-
-
-#pragma mark - 上传图片
-
-/**
- * @brief 上传单张图片
- * @param URLString URL地址的字符串
- * @param imageData URL地址的字符串
- * @param parameters 请求中使用的参数
- * @param successBlock 请求成功的回调
- * @param failedBlock 请求失败的回调
- */
-+(void)requestAFURL:(NSString *)URLString parameters:(id)parameters imageData:(NSData *)imageData succeed:(SuccessBlock)successBlock failure:(FailedBlock)failedBlock;
-
-
-/**
- * @brief 上传多张图片
- * @param URLString URL地址的字符串
- * @param parameters 请求中使用的参数
- * @param imageDataArray URL地址的字符串
- * @param successBlock 请求成功的回调
- * @param failedBlock 请求失败的回调
- */
-+(void)requestAFURL:(NSString *)URLString parameters:(id)parameters  imageDataArray:(NSArray *)imageDataArray succeed:(SuccessBlock)successBlock failure:(FailedBlock)failedBlock;
-
-
-/**
- * @brief 上传文件
- * @param URLString URL地址的字符串
- * @param parameters 请求中使用的参数
- * @param fileData URL地址的字符串
- * @param successBlock 请求成功的回调
- * @param failedBlock 请求失败的回调
- */
-+(void)requestAFURL:(NSString *)URLString parameters:(id)parameters fileData:(NSData *)fileData succeed:(SuccessBlock)successBlock  failure:(FailedBlock)failedBlock;
 
 
 

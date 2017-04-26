@@ -20,20 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Some Preferences Infomation
 ///---------------------------------------------------
 
-/**
- * @brief 定义枚举类型的网络请求类型：GET OR POST
- * TF_HTTPSMETHOD_GET: 网络请求方式为GET
- * TF_HTTPSMETHOD_POST: 网络请求方式为POST
- */
-typedef NS_ENUM(NSInteger,TF_HTTPSMETHOD)
-{
-    TF_HTTPSMETHOD_GET   = 0,
-    TF_HTTPSMETHOD_POST  = 1,
-};
-/** 网络请求成功的回调 */
-typedef void (^SuccessBlock)(id responseObject);
-/** 网络请求失败的回调 */
-typedef void (^FailedBlock)(NSError*error);
+
+
 
 
 

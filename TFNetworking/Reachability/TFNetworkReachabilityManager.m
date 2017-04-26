@@ -27,7 +27,7 @@
     static TFNetworkReachabilityManager *_sharedManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedManager = [self manager];
+        _sharedManager = [[TFNetworkReachabilityManager alloc]init];
     });
     
     return _sharedManager;
@@ -61,7 +61,7 @@
                 break;
             case AFNetworkReachabilityStatusReachableViaWiFi:
             {
-                NSLog(@"当前使用的WiFi");
+                NSLog(@"当前使用的是WiFi");
             }
                 break;
             default:
