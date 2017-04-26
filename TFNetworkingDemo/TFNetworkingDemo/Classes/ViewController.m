@@ -23,26 +23,25 @@
     [super viewDidLoad];
     
     TFNetWorkingManager *manager=[TFNetWorkingManager sharedManager];
-    manager.tf_BaseURLString=@"https://app.ywrl.gov.cn:8554";
+    manager.tf_BaseURLString=@"http://122.226.66.214:7780/ywcitzencard";
     manager.certificateString=@"*.dabay.cn";
 
     
     NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
-    [param setValue:@"1" forKey:@"paramStr"];
-    [param setValue:@"1" forKey:@"access_token"];
+    [param setValue:@"1.1" forKey:@"app_version"];
+    [param setValue:@"B1ABC544-F183-403F-BFD9-453E01F5ED10" forKey:@"imei"];
     [param setValue:@"2" forKey:@"device_type"];
     
-
-    NSString *urlString=[NSString stringWithFormat:@"https://app.ywrl.gov.cn:8554/shebao/shebaoQuery.json?"];
+    NSString *urlString=[NSString stringWithFormat:@"app/version.json"];
     
   
     //测试--HTTPS网络请求管理者：TFHTTPSessionManager
     [TFHTTPSessionManager tf_RequestURLString:urlString HttpMethod:TF_HTTPSMETHOD_POST Parameters:param succeed:^(id  _Nonnull responseObject) {
         
-        
+        NSLog(@"检查是否有新版本-网络请求成功!");
     } failure:^(NSError * _Nonnull error) {
         
-        
+        NSLog(@"检查是否有新版本-网络请求失败!");
     }];
 
     

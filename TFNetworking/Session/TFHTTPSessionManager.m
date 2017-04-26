@@ -164,6 +164,12 @@
         [manager POST:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             if (successBlock){
+                //1.网络请求成功后错误信息的处理
+                NSData *data = (NSData *)responseObject;
+                NSDictionary* adict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+                [self tf_processingErrorInfoWithDictionary:adict];
+                
+                //2.返回处理得到的字典
                 NSString *responseStr =  [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
                 successBlock([TFHTTPSessionManager dictionaryWithJsonString:responseStr]);
             }else{
@@ -176,7 +182,20 @@
     }
 }
 
+#pragma mark - 网络请求错误的处理
 
+/**
+ 处理网络请求成功的的错误请求信息处理
+
+ @param errorInfo 网络请求返回的字典
+ */
++(void)tf_processingErrorInfoWithDictionary:(NSDictionary *)errorInfo{
+
+
+    NSLog(@"TFNetworking-网络请求成功-处理相关错误信息中-");
+    NSLog(@"errorInfo--%@",errorInfo);
+    NSLog(@"description--%@",errorInfo[@"data"][@"description"]);
+}
 
 
 
