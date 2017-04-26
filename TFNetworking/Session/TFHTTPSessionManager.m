@@ -36,7 +36,6 @@
     //1.创建TFHTTPSessionManager类型的对象
     NSString *baseURLString=[TFNetWorkingManager sharedManager].tf_BaseURLString;
     NSURL *baseURL=[NSURL URLWithString:baseURLString];
-    NSLog(@"创建TFHTTPSessionManager类型的对象--baseURLString=%@",baseURLString);
     TFHTTPSessionManager *tf_HttpsSessionManager=[[TFHTTPSessionManager alloc]initWithBaseURL:baseURL];
     //2.设置tf_HttpsSessionManager的安全策略
     [self setupSecurityPolicyForTFHttpsSessionManager:tf_HttpsSessionManager];
@@ -49,18 +48,14 @@
 +(void)setupSecurityPolicyForTFHttpsSessionManager:(TFHTTPSessionManager *)tf_HttpsSessionManager{
     
     NSString * certificateString=[TFNetWorkingManager sharedManager].certificateString;
-    NSLog(@"设置tf_HttpsSessionManager的安全策略--certificateString=%@",certificateString);
     //设置安全策略
     NSString *cerPath = [[NSBundle mainBundle] pathForResource:certificateString ofType:@"cer"];
     NSData *cerData = [NSData dataWithContentsOfFile:cerPath];
-
     //tf_HttpsSessionManager.securityPolicy=[AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];//AFSSLPinningModeCertificate
     tf_HttpsSessionManager.securityPolicy=[AFSecurityPolicy defaultPolicy];
     tf_HttpsSessionManager.securityPolicy.allowInvalidCertificates=YES;//设置允许使用证书
     tf_HttpsSessionManager.securityPolicy.validatesDomainName=NO;//是否需要验证域名
     tf_HttpsSessionManager.securityPolicy.pinnedCertificates=[NSSet setWithObject:cerData];
-    NSLog(@"证书名称设置完毕，并设置相关安全策略完成。");
-    
 }
 
 /** 设置tf_HttpsSessionManager请求和返回的Serializer */
@@ -71,7 +66,6 @@
     
     //初始化网络请求返回的设置
     tf_HttpsSessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    //tf_HttpsSessionManager.responseSerializer = [AFJSONResponseSerializer serializer];
     tf_HttpsSessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain",@"image/jpeg", nil];
 }
 
@@ -154,7 +148,9 @@
         [manager GET:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             if (successBlock){
-                successBlock(responseObject);
+                //successBlock(responseObject);
+                NSString *responseStr =  [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+                successBlock([TFHTTPSessionManager dictionaryWithJsonString:responseStr]);
             }else{
                 NSLog(@"TFNetWorking发送GET请求时失败，链接异常或网络不存在");
             }
@@ -166,7 +162,9 @@
         [manager POST:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             if (successBlock){
-                successBlock(responseObject);
+                //successBlock(responseObject);
+                NSString *responseStr =  [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+                successBlock([TFHTTPSessionManager dictionaryWithJsonString:responseStr]);
             }else{
                 NSLog(@"TFNetWorking发送POST请求时失败，链接异常或网络不存在");
             }

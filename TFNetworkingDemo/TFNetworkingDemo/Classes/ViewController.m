@@ -36,6 +36,7 @@
     NSString *urlString=[NSString stringWithFormat:@"https://app.ywrl.gov.cn:8554/shebao/shebaoQuery.json?"];
     
   
+    //测试--HTTPS网络请求管理者：TFHTTPSessionManager
     [TFHTTPSessionManager tf_RequestURLString:urlString HttpMethod:TF_HTTPSMETHOD_POST Parameters:param succeed:^(id  _Nonnull responseObject) {
         
         
@@ -45,6 +46,10 @@
     }];
 
     
+    
+    //测试--网络状态管理者：TFNetworkReachabilityManager
+    TFNetworkReachabilityManager *networkManager=[TFNetworkReachabilityManager sharedManager];
+    [networkManager start];
 
 
     

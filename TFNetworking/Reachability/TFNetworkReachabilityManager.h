@@ -17,6 +17,20 @@ NS_ASSUME_NONNULL_BEGIN
 @interface TFNetworkReachabilityManager : AFNetworkReachabilityManager
 
 
+
+/**
+ 创建或者返回网络状态管理者对象
+
+ @return 网络状态管理者单例
+ */
++ (instancetype)sharedManager;
+
+
+/**
+ 开始通过网络状态管理者单例来监听当前的网络状态
+ */
+-(void)start;
+
 @end
 
 NS_ASSUME_NONNULL_END
