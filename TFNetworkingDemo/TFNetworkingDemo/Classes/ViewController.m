@@ -36,7 +36,7 @@
     
   
     //测试--HTTPS网络请求管理者：TFHTTPSessionManager
-    [TFHTTPSessionManager tf_RequestURLString:urlString HttpMethod:TF_HTTPSMETHOD_POST Parameters:param succeed:^(id  _Nonnull responseObject) {
+    [TFHTTPSessionManager tf_RequestURLString:urlString HttpMethod:TF_HTTPSMETHOD_POST Parameters:param succeed:^(NSDictionary * _Nonnull responseDictionary) {
         
         NSLog(@"检查是否有新版本-网络请求成功!");
     } failure:^(NSError * _Nonnull error) {
@@ -49,6 +49,8 @@
     //测试--网络状态管理者：TFNetworkReachabilityManager
     TFNetworkReachabilityManager *networkManager=[TFNetworkReachabilityManager sharedManager];
     [networkManager start];
+
+    
 
 
     
