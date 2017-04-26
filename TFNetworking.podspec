@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "TFNetworking"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "Dabay tech : TFNetworking is a high level request util based on AFNetworking."
   s.homepage     = "https://github.com/Donkey-Tao/TFNetworking"
   s.license      = "MIT"
