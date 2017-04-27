@@ -9,7 +9,7 @@ TFNetworking
 
 ## What
 
-TFNetworking is is a high level request util based on AFNetworking. It's developed by the iOS Team of Dabay. It provides a High Level API for network request.TFNetworking is used in all products of Dabay.
+TFNetworking is a high level request util based on AFNetworking. It's developed by the iOS Team of Dabay. It provides a High Level API for network request.TFNetworking is used in all products of Dabay.
 
 
 
